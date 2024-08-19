@@ -24,7 +24,7 @@
       <li><%= link_to "member",tweets_dog_path %></li>
       <li><%= link_to "activity",tweets_cat_path %></li>
       <li><%= link_to "ゼミ生交流",tweets_apple_path %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
      <% else %>
       <li><%= link_to "新規登録", new_user_registration_path %></li>
       <li><%= link_to "ログイン", new_user_session_path %></li>
