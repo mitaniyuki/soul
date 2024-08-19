@@ -1,0 +1,40 @@
+
+
+<div class="bg_test">
+  
+<h1>ゼミ生交流</h1>
+<h3>Tweet一覧</h3>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+      <%= t.body %>
+      <%= t.title %>
+      <%= t.user.email %>
+      <%= t.created_at %>
+
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span>
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+          <%= button_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
+              <p>いいねを取り消す</p><%= t.likes.count %>
+          <% end %>
+        <% else %>
+          <%= button_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
+              <p>いいね</p><%= t.likes.count %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <p>いいねの数 = </p><%= t.likes.count %>
+      <% end %>
+    </div
+  <% end %>
+</div>
+
+  <div class="bg_test2">
+  </div>
+</div>
