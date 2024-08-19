@@ -68,7 +68,7 @@ group :test do
 end
 gem 'devise'
 gem 'sassc'
-gem 'webpacker', '5.4.3'
+
 
 group :production do
   gem 'pg'
