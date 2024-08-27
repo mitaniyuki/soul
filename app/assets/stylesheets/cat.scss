@@ -1,0 +1,112 @@
+.bg_ctest {
+    height: 2400px;                  
+    padding:  5px;                             
+    background-color: #669E96;   
+}
+
+.cattitle {
+    height: 100px;                  
+    width: 200px;                             
+    animation-name:fadeLeftAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+        
+@keyframes fadeLeftAnime{
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+        
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.catonebox{
+    height: 300px;
+
+    .catonebox1{
+        width: 500px;
+        height: 90px;
+        color: black;
+        font-size: 50px;
+
+    }
+    .catonebox2{
+        height: 180px;
+        color: black;
+        background-color: #D9D9D9;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.cattwobox{
+    background-color: #809DB0; 
+    display: flex;
+}
+.caten{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black; 
+
+}
+
+.cat-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.cattwobox1{
+    width: 800px;
+    height: 100px;
+    color: black;
+}
+
+.catfivebox{
+    height: 600px;
+
+    .catfivebox1{
+        height: 90px;
+        color: black;
+        font-size: 50px;
+
+    }
+    .catfivebox2{
+        height: 500px;
+        width: 900px;
+        color: black;
+        background-color: #D9D9D9;
+        margin-left: 20%;
+    }
+    .catone-image{
+        height: 500px;
+        width: 900px;
+    }
+}
+.catsixbox{
+    height: 600px;
+
+    .catsixbox1{
+        height: 90px;
+        color: black;
+        font-size: 50px;
+
+    }
+    .catsixbox2{
+        height: 500px;
+        width: 900px;
+        color: black;
+        background-color: #D9D9D9;
+        margin-left: 20%;
+    }
+    .cattwo-image{
+        height: 500px;
+        width: 900px;
+    
+    }
+}

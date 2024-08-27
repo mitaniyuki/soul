@@ -53,3 +53,16 @@ header li {
   list-style: none;
   margin-right: 40px;
 }
+
+.header1-image {
+  width: 75px;
+  height: 75px;
+  margin-right: 300px;
+}
+
+.header2-image {
+  width: 75px;
+  height: 75px;
+  margin-left: 300px;
+}
+

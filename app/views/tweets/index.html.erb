@@ -1,40 +1,90 @@
 
 
 <div class="bg_test">
-  
-<h1>ゼミ生交流</h1>
-<h3>Tweet一覧</h3>
-<%= link_to "新規投稿へ", new_tweet_path %>
-<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-<div class="tweets-container">
-  <% @tweets.each do |t| %>
-    <div class="tweet">
-      <%= t.body %>
-      <%= t.title %>
-      <%= t.user.email %>
-      <%= t.created_at %>
-
-      <span class="star-rating">
-        <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-        <span class="star-rating-back">★★★★★</span>
-      </span>
-      <% if user_signed_in? %>
-        <% if current_user.already_liked?(t) %>
-          <%= button_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
-              <p>いいねを取り消す</p><%= t.likes.count %>
-          <% end %>
-        <% else %>
-          <%= button_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
-              <p>いいね</p><%= t.likes.count %>
-          <% end %>
-        <% end %>
-      <% else %>
-        <p>いいねの数 = </p><%= t.likes.count %>
-      <% end %>
-    </div
-  <% end %>
-</div>
-
-  <div class="bg_test2">
+  <div class="main">
+    <div class="main1">
+      <h3>本気のゼミ。</h3>
+    </div>
+    <div class="main2">
+      <h2>それが</h2>
+    </div>
+    <div class="main3">
+      <h1>中野ゼミ。</h1>
+    </div>
   </div>
+
+    <div class="box">
+      <div class="title">
+        about us
+      </div>    
+      <div class="about">
+        <div class="about1">
+          中野ゼミって？
+        </div>
+        <div class="about2">
+          何をしているゼミなの？活動時間は？中野ゼミってどんなゼミ？
+        </div>
+        <div class="button">
+          <%= link_to "read more", tweets_job_path %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="box1">
+      <div class="title">
+      member
+      </div>    
+      <div class="indexabout">
+        <div class="about1">
+          暑苦しい人間関係
+        </div>
+        <div class="about2">
+          顧問の先生紹介、ゼミ生たち
+        </div>
+        <div class="button">
+          <%= link_to "read more", tweets_dog_path %>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="title">
+        activities
+      </div>  
+      <div class="indexabout1">  
+        <div class="about1">
+          中野ゼミでは何ができる？
+        </div>
+        <div class="about2">
+          なんでもできるよ！
+        </div>
+        <div class="button">
+          <%= link_to "read more", tweets_cat_path %>
+        </div>
+      </div>
+    </div>
+
+    <div class="box1">
+      <div class="title1">
+        exchange seminer member
+      </div>    
+      <div class="indexabout2">
+        <div class="about1">
+          ゼミ選びに迷っているそこの君！
+        </div>
+        <div class="about2">
+         ゼミの先輩が詳しく教えるよ！中野ゼミのことだけでなく他ゼミの特徴やゼミの選び方を教えてもらおう！！
+        </div>
+        <div class="button">
+          <%= link_to "read more", tweets_apple_path %>
+        </div>
+      </div>
+    </div>
+
+    <div class="underbox">
+    </div>
+
+
+
 </div>

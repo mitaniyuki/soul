@@ -17,6 +17,11 @@
   <body>
   <header>
    <div class="header-list">
+
+
+    <%= image_tag 'nakano.jpg', class:"header1-image"%>
+
+
     <ul>
      <% if user_signed_in? %>
       <li><%= link_to "top", tweets_path %></li>
@@ -31,6 +36,8 @@
      <% end %>
     </ul>
 
+
+    <%= image_tag 'nakano.jpg', class:"header2-image"%>
 
 
    </div>

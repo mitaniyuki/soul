@@ -1,0 +1,75 @@
+.bg_otest {
+    height: 2900px;                  
+    padding:  5px;                             
+    background-color: #7A6D6D;   
+}
+
+.orenge1{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+}
+
+
+.orengebox {
+    width: 250px;
+    height: 250px;  
+    margin-top: 20px;
+    margin-left: 675px;
+
+    margin-bottom: -30px;
+
+    .orenge-image{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+
+.triangle {
+    height: calc(600px / 2);
+    width: 600px;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background-color: #DB592A;
+    margin-left: 30%;
+    z-index: -1;
+}
+
+
+
+.orengebox2 {
+    width: 600px;
+    height: 1000px;  
+    margin-left: 30%;
+    background-color: #DB592A;  
+
+}
+
+.orengesend{
+    width: 2900px;
+    height: 1000px;
+    background-color: #D9D9D9;   
+    margin-top: 100px; 
+}
+.reversebutton{
+    width: 350px;
+    height: 50px;
+    font-size: 40px;
+    background-color: gray;  
+}
+
+
+
+
+
+.purofiletitle{
+    font-size: 40px;
+    width: 600px;
+    height: 100px;
+    color: white;
+    margin-left: 45px;
+}

@@ -24,8 +24,25 @@ class TweetsController < ApplicationController
     end
 
     def apple
-        
+        @tweets = Tweet.all
     end
+
+    def orenge
+        @tweets = Tweet.all
+    end
+
+    def grape
+        @tweets = Tweet.all
+    end
+
+    def kiwi
+        @tweets = Tweet.all
+    end
+
+    def mango
+        @tweets = Tweet.all
+    end
+
     
     def create
         tweet = Tweet.new(tweet_params)

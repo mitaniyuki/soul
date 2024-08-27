@@ -1,0 +1,87 @@
+<div class="bg_otest">
+
+    <div class="orengetitle">
+        <h1>PROFILE</h1>
+    </div>
+
+    <div class="orengebox">
+      <%= image_tag 'aiyuki.jpg', class:"orenge-image"%>
+    </div>
+
+    <div class="triangle">
+    </div>
+
+    <div class="orengebox2">
+        <div class="purofiletitle">
+        学年：3年
+        </div>  
+        <div class="purofiletitle">
+        MBTI:ENFP
+        </div>
+        <div class="purofiletitle">
+        名前：三谷悠貴
+        </div>  
+        <div class="purofiletitle">
+        学科：経営学科
+        </div>  
+        <div class="purofiletitle">
+        出身地：東京
+        </div>   
+        <div class="purofiletitle">
+        バイト：映画館、ビアガーデン
+        </div>  
+        <div class="purofiletitle">
+        趣味：映画鑑賞
+        </div>  
+        <div class="purofiletitle">
+        気軽に相談してね！
+        </div>  
+        <div class="purofiletitle">
+        アピールポイント
+        </div>  
+        <div class="purofiletitle">
+        ＃留学経験あり
+        ＃陽気な人
+        </div>
+    </div>
+
+
+
+
+
+    <div class="orengesend">
+        <%= link_to "新規投稿へ", new_tweet_path %>
+        <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <div class="tweets-container">
+        <% @tweets.each do |t| %>
+            <div class="tweet">
+            <%= t.body %>
+            <%= t.title %>
+            <%= t.user.email %>
+            <%= t.created_at %>
+
+            <span class="star-rating">
+                <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+                <span class="star-rating-back">★★★★★</span>
+            </span>
+            <% if user_signed_in? %>
+                <% if current_user.already_liked?(t) %>
+                <%= button_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
+                    <p>いいねを取り消す</p><%= t.likes.count %>
+                <% end %>
+                <% else %>
+                <%= button_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
+                    <p>いいね</p><%= t.likes.count %>
+                <% end %>
+                <% end %>
+            <% else %>
+                <p>いいねの数 = </p><%= t.likes.count %>
+            <% end %>
+            </div>
+        <% end %>
+        </div>
+        <div class="reversebutton">
+        <%= link_to "ゼミ生交流に戻る", tweets_apple_path %>
+        </div>
+    </div>
+</div>
