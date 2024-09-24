@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Soul</title>
+  <title>中野ゼミ紹介サイト</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
+  <script src="https://kit.fontawesome.com/c18521ba42.js" crossorigin="anonymous"></script>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 
@@ -17,38 +17,29 @@
   <body>
   <header>
    <div class="header-list">
-
-
-    <%= image_tag 'nakano.jpg', class:"header1-image"%>
-
-
     <ul>
-     <% if user_signed_in? %>
       <li><%= link_to "top", tweets_path %></li>
       <li><%= link_to "about us",tweets_job_path %></li>
       <li><%= link_to "member",tweets_dog_path %></li>
       <li><%= link_to "activity",tweets_cat_path %></li>
       <li><%= link_to "ゼミ生交流",tweets_apple_path %></li>
-      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-     <% else %>
-      <li><%= link_to "新規登録", new_user_registration_path %></li>
-      <li><%= link_to "ログイン", new_user_session_path %></li>
-     <% end %>
     </ul>
-
-
-    <%= image_tag 'nakano.jpg', class:"header2-image"%>
-
-
    </div>
   </header>
   <main>
    <%= yield %>
   </main>
- </body>
  
 
-
-
+   
+    <footer>
+      <%= link_to "https://www.instagram.com/nakanozemi.toyo/" do %> 
+      <i class="fa-brands fa-instagram fa-3x faa-wrench animated-hover"></i>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+        
+    <% end %>
+    
+    </footer>
+  </body>
+ 
 </html>
-

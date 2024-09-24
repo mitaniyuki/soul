@@ -1,92 +1,130 @@
-<div class="bg_otest">
+<div class="bg_gtest">
 
     <div class="orengetitle">
         <h1>PROFILE</h1>
     </div>
 
-    <div class="orengebox">
-      <%= image_tag 'yuka.jpg', class:"orenge-image"%>
-    </div>
 
-    <div class="triangle">
+    <div class="dogtwobox">
+        <div class="dogtwobox1">
+        ゼミ生
+        </div>
+        <div class="dogtwobox2">
+        </div>
     </div>
-
-    <div class="mangobox2">
-        <div class="purofiletitle">
-        学年：3年
-        </div>  
-        <div class="purofiletitle">
-        MBTI:ESFJ
+    <div class="dogtwobox3">
+        <div class="dogen">
+            <%= image_tag 'yuka.jpg', class:"dog-image"%>
         </div>
-        <div class="purofiletitle">
-        名前：栗原佑佳
-        </div>  
-        <div class="purofiletitle">
-        学科：マーケティング学科
-        </div>  
-        <div class="purofiletitle">
-        出身地：神奈川県
-        </div>   
-        <div class="purofiletitle">
-        バイト：カフェ、塾講師
-        </div>  
-        <div class="purofiletitle">
-        趣味：映画やドラマを見ること
-        </div>  
-        <div class="purofiletitle">
-        気軽に相談してね！
-        </div>  
-        <div class="purofiletitle">
-        どんな話でも大丈夫です！
-        </div> 
-        <div class="purofiletitle">
-        アピールポイント
-        </div>  
-        <div class="purofiletitle">
-        ＃おしゃべり大好き
-        </div>
-        <div class="purofiletitle">
-        ＃超B型
+        <div class="dogtwobox4">
+            <div class="dogtwobox40">
+            栗原佑佳
+            </div>
+            <div class="dogtwobox40">
+            くりはら　ゆか
+            </div>
+            <div class="dogtwobox41">
+            東洋大学
+            </div>
+            <div class="dogtwobox42">
+            経営学部
+            </div>
+            <div class="dogtwobox43">
+            マーケティング
+            </div>
         </div>
     </div>
 
 
 
-
-
-    <div class="orengesend">
-        <%= link_to "新規投稿へ", new_tweet_path %>
-        <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-        <div class="tweets-container">
-        <% @tweets.each do |t| %>
-            <div class="tweet">
-            <%= t.body %>
-            <%= t.title %>
-            <%= t.user.email %>
-            <%= t.created_at %>
-
-            <span class="star-rating">
-                <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-                <span class="star-rating-back">★★★★★</span>
-            </span>
-            <% if user_signed_in? %>
-                <% if current_user.already_liked?(t) %>
-                <%= button_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
-                    <p>いいねを取り消す</p><%= t.likes.count %>
-                <% end %>
-                <% else %>
-                <%= button_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
-                    <p>いいね</p><%= t.likes.count %>
-                <% end %>
-                <% end %>
-            <% else %>
-                <p>いいねの数 = </p><%= t.likes.count %>
-            <% end %>
-            </div
-        <% end %>
+    <div class="gdogtwobox5">
+        <div class="dogtwobox51">
+            <div class="dogtwobox51a">
+            共通点探し
+            </div>
+            <div class="gdogtwobox51b">
+                <div class="dogtwobox51b1">
+                血液型:B型
+                </div>
+                <div class="dogtwobox51b1">
+                バイト：飲食店、塾講師
+                </div>
+                <div class="dogtwobox51b1">
+                出身：神奈川県
+                </div>
+                <div class="dogtwobox51b1">
+                ##記憶力良い
+                </div>
+                <div class="dogtwobox51b1">
+                #おしゃべり好き#休みの日はゴロゴロします
+                </div>
+            </div>
         </div>
-        <div class="reversebutton">
-        <%= link_to "ゼミ生交流に戻る", tweets_apple_path %>
+        <div class="dogtwobox52">
+            <div class="dogtwobox52a">
+            メッセージ
+            </div>
+            <div class="gdogtwobox52b">
+                <div class="dogtwobox51b1">
+                中野ゼミは同期だけでなく
+                </div>
+                <div class="dogtwobox51b1">
+                先輩と後輩とも遊びに行ったりご飯に行くほど仲がいいです！
+                </div>
+                <div class="dogtwobox51b1">
+                中野ゼミの活動はチームでやることがほとんどなので、
+                </div>
+                <div class="dogtwobox51b1">
+                学年を超えた関わりができます！
+                </div>
+                <div class="dogtwobox51b1">
+                中野ゼミ生になって素敵な思い出一緒につくりませんか✨
+                </div>
+            </div>
+        </div>
+        <div class="dogtwobox53">
+            <div class="dogtwobox53a">
+            趣味
+            </div>
+            <div class="gdogtwobox53b">
+                <div class="dogtwobox51b1">
+                ドラマ見る
+                </div>
+                <div class="dogtwobox51b1">
+                映画見る
+                </div>
+                <div class="dogtwobox51b1">
+                人の誕生日覚えること
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dogtwobox6">
+        <div class="dogtwobox61">
+        好きな〇〇
+        </div>
+        <div class="dogtwobox62">
+            <div class="dogtwobox51b1">
+            好きな食べ物:辛いもの
+            </div>
+            <div class="dogtwobox51b1">
+            好きな映画:ハリーポッター
+            </div>
+            <div class="dogtwobox51b1">
+            好きなお菓子:じゃがりこ
+            </div>
+            <div class="dogtwobox51b1">
+            好きなアニメか漫画:見ないかな
+            </div>
+            <div class="dogtwobox51b1">
+            好きな音楽:backnumber
+            </div>
+            <div class="dogtwobox51b1">
+            好きな場所、観光地:家
+            </div>
         </div>
     </div>
 </div>
+
+    

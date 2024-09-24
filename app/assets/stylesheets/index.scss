@@ -1,4 +1,10 @@
 
+.bg_test {
+    height: 2900px;                  
+    padding:  5px;                             
+    background-color: #FFEEB9; 
+}
+
 .main{
     font-size: 50px;
     width: 600px;
@@ -10,6 +16,7 @@
         width: 600px;
         height: 100px;
         margin-left: 30%;
+        font-family: "Kokoro";
 
     }
     .main2{
@@ -17,6 +24,7 @@
         width: 600px;
         height: 100px;
         margin-left: 30%;
+        font-family: "Kokoro";
     }
     .main3{
         font-size: 50px;
@@ -27,60 +35,67 @@
     }
 }
 
-
-
 .box{
     width: 900px;
-    height: 400px;
     margin-top: 100px;
-    animation-name:fadeLeftAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-}
-        
-@keyframes fadeLeftAnime{
+    height: auto; 
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 70%;
+}   
+@keyframes scroll-anim {
     from {
-    opacity: 0;
-    transform: translateX(-100px);
+        opacity: 0;
+        scale: 0;
     }
-        
     to {
-    opacity: 1;
-    transform: translateX(0);
+        opacity: 1;
+        scale: 1;
     }
 }
 
 .box1{
     width: 900px;
-    height: 400px;
     margin-left: 46%;
     margin-top: 100px;
-
-
-
-
-
+    height: auto; 
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 70%;
+}
+@keyframes scroll-anim {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 .title{
+    font-family: 'Amatic SC', cursive;
     font-size: 60px;
-    width: 600px;
-    height: 100px;
-    
+    width: 800px; 
+    height: auto; 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 .title1{
-    font-size: 50px;
-    width: 800px;
-    height: 100px;
-    
+    font-family: 'Amatic SC', cursive;
+    font-size: 60px;
+    width: 800px; 
+    height: auto; 
 }
+
+
 
 .about{
     font-size: 40px;
     width: 900px;
-    height: 300px;
+    height: auto;
     background-color: white;
     box-shadow: 50px 50px 0 #AD3939;
 
@@ -90,21 +105,54 @@
     font-size: 40px;
     height: 90px;
     color: black;
-    margin-left: 300px;
-    margin-right: 300px;
-}
-.about2{
-    font-size: 40px;
-    height: 150px;
-    color: black;
+    text-align: center;
+    font-family: "Nico Moji";
 }
 
-.button{
-    font-size: 15px;
-    width: 110px;
-    height: 30px;
-    background-color: gray
+.about2{
+    font-size: 30px;
+    height: auto;
+    color: black;
+    text-align: center;
 }
+.iabout1{
+    font-size: 40px;
+    height: 90px;
+    color: black;
+    text-align: center;
+}
+
+.iabout2{
+    font-size: 30px;
+    height: auto;
+    color: black;
+    text-align: center;
+}
+
+
+
+.button{
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 5px 5px 0 #000000;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #c1c1c1;
+    box-shadow: 0 0 0;
+    transform: translate(5px, 5px);
+}
+
 
 .indexabout{
     font-size: 40px;
@@ -112,28 +160,8 @@
     height: 300px;
     background-color: white;
     box-shadow: -50px 50px 0 #5C7BEC;
-
-    .about1{
-        font-size: 40px;
-        width: 500px;
-        height: 90px;
-        color: black;
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-    .about2{
-        font-size: 40px;
-        width: 800px;
-        height: 180px;
-        color: black;
-    }
+    text-align: center;
         
-    .button{
-        font-size: 15px;
-        width: 110px;
-        height: 30px;
-        background-color: gray
-    }
 
 }
 
@@ -144,71 +172,14 @@
     background-color: white;
     box-shadow: 50px 50px 0 #008000;
 
-    .about1{
-        font-size: 40px;
-        width: 500px;
-        height: 90px;
-        color: black;
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-    .about2{
-        font-size: 40px;
-        width: 800px;
-        height: 180px;
-        color: black;
-    }
-        
-    .button{
-        font-size: 15px;
-        width: 110px;
-        height: 30px;
-        background-color: gray
-    }
 }
 
 .indexabout2{
     font-size: 40px;
-    width: 900px;
+    width: auto;
     height: 300px;
     background-color: white;
     box-shadow: -50px 50px 0 #7A4980;
-
-    .about1{
-        font-size: 30px;
-        width: 500px;
-        height: 90px;
-        color: black;
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-    .about2{
-        font-size: 35px;
-        width: 850px;
-        height: 180px;
-        color: black;
-    }
-        
-    .button{
-        font-size: 15px;
-        width: 110px;
-        height: 30px;
-        background-color: gray
-    }
-
-}
-
-
-
-.bg_test {
-    height: 2700px;                  
-    padding:  5px;                             
-    background-color: #FFEEB9; 
-}
-
-
-.underbox{
-    margin-top: 100px;
-    height: 100px;                                          
-    background-color: #DB592A;   
+    text-align: center;
+    
 }

@@ -1,18 +1,19 @@
-
-
 .bg_jtest {                
     padding:  5px;                             
     background-color: #FFF8E1;   
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 .jobtitle {
     height: 200px;                  
-    font-size: 40px;                           
-    font-family: "メイリオ", "遊ゴシック", "ヒラギノ角ゴ proN", sans-serif;
+    font-size: 30px;                           
     animation-name:fadeLeftAnime;
     animation-duration:0.5s;
     animation-fill-mode:forwards;
     opacity:0;
+    margin-left: 10%;
+    font-family: 'Amatic SC', cursive;
 }
             
     @keyframes fadeLeftAnime{
@@ -29,31 +30,50 @@
 
 
 .onebox{
-    height: 300px;
+    height: 800px;
+    background-color: white;
 
     .onebox1{
         width: 500px;
         height: 90px;
-        font-size: 60px;
+        font-size: 40px;
         color: black;
-        margin-left: 5%;
+        margin-left: 10%;
     }
     .onebox2{
-        height: 300px;
         color: black;
+        height: 10px;
+        font-size: 20px;
+        padding: 50px; 
+        text-align: center;
+    }
+    .onebox20{
+        color: black;
+        height: 10px;
         font-size: 30px;
-        background-color: #D9D9D9;
-        margin-left: 50px;
-        margin-right: 50px;
-        
+        padding: 50px; 
+        text-align: center;
+    }
+    .onebox21{
+        color: red;
+        height: 10px;
+        font-size: 30px;
+        padding: 50px; 
+        text-align: center;
     }
     
+}
+
+.twoboxbigjob{
+    background-color: white;
+    height: 1200px;
 }
 
 .twobox{
     width: 900px;
     height: 100px;
-    margin-top: 10%;
+    margin-top: 20%;
+    margin-left: 10%;
     display: flex;
     justify-content: space-evenly;
 
@@ -67,7 +87,7 @@
     .twobox2{
         width: 800px;
         height: 100px;
-        color: black;
+        color: red;
         font-size: 70px;
     }
     
@@ -77,29 +97,28 @@
 .bigenbox {
     display: flex;
     justify-content: space-evenly;
-    background-color: #D9D9D9;
+    margin-top: 5%;
 }
 
 .enbox {
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
 	border-radius: 50%;
-    background-color: black; 
     display: flex;
 
     .job-image{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
     }
     .job1-image{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
     }
     .job2-image{
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
     }
 }
@@ -107,26 +126,26 @@
 .minibox{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 5%;
 }
 
 .minibox1{
     font-size: 30px;
-    width: 200px;
-    height: 200px;
     color: black;
+    width: 300px;
     display: flex;
+    text-align: center;
+    margin-left: 3%;
 }
 .minibox2{
-    font-size: 45px;
-    width: 200px;
-    height: 200px;
+    font-size: 30px;
+    width: 300px;
     color: black;
     display: flex;
 }
 .minibox3{
-    font-size: 30px;
-    width: 200px;
-    height: 200px;
+    font-size: 25px;
+    width: 300px;
     color: black;
     display: flex;
 }
@@ -139,34 +158,101 @@
     justify-content: space-evenly;
 }
 
-.threebox1{
-    font-size: 30px;
+.threebox10{
+    margin-top: 5%;
+    font-size: 16px;
     width: 380px;
-    height: 450px;
     color: black;
     display: flex;
-    background-color: #D9D9D9;
+    height: auto; 
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 70%;
+
+    flex-direction: column;
+    text-align: center;
+    .threebox1{
+        border: 1px solid white;
+        height: 50px;
+    }
+}
+@keyframes scroll-anim {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
-.fourbox{
-    height: 300px;
-    background-color: #D9D9D9;
+.threebox11{
     margin-top: 5%;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    width: 380px;
+    color: black;
+    display: flex;
+    height: auto; 
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 70%;
+
+    flex-direction: column;
+    text-align: center;
+    .threebox1{
+        border: 1px solid white;
+        height: 50px;
+    }
+}
+@keyframes scroll-anim {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
+
+
+
+
+.fourbox{
+    height: 1000px;
+    background-color: white;
+    margin-top: 10%;
 
     .fourbox1{
         color: black;
         font-size: 30px;
+        text-align: center;
     }
     .fourbox2{
+        width: 100px;
         height: 5px;
         background-color: #AD3939;
+        margin: 0 auto;
+        margin-bottom: 5%;
     }
     .fourbox3{
-        margin-top: 50px;
-        height: 180px;
         color: black;
-        font-size: 30px;
+        font-size: 20px;
+        text-align: center;
+        height: 80px;
+
     }
+}
+
+.fourbox30{
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    height: 80px;
+
 }

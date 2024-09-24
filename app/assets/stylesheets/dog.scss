@@ -1,17 +1,21 @@
 .bg_dtest {
-    height: 2100px;                  
+    height: 2900px;                  
     padding:  5px;                             
-    background-color: #73BFF0;   
+    background-color: #FFF8E1;   
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
 .dogtitle {
     height: 100px;                  
-    width: 200px;                             
+    width: 200px;  
+    font-size: 30px;                           
     animation-name:fadeLeftAnime;
     animation-duration:0.5s;
     animation-fill-mode:forwards;
     opacity:0;
+    margin-left: 10%;
+    font-family: 'Amatic SC', cursive;
 }
         
 @keyframes fadeLeftAnime{
@@ -28,86 +32,322 @@
 
 .dogonebox{
     height: 300px;
+    margin-top: 5%;
 
     .dogonebox1{
         width: 500px;
-        height: 90px;
         color: black;
         font-size: 50px;
-
+        margin-left: 45%;
     }
     .dogonebox2{
-        height: 180px;
+        height: 350px;
         color: black;
-        background-color: #D9D9D9;
-        margin-left: 10px;
-        margin-right: 10px;
+        background-color: white;
+        margin-left: 100px;
+        margin-right: 100px;
     }
+    .dogonebox20{
+        height: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+    }
+    .dogonebox21{
+        height: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+    }
+    .dogonebox22{
+        height: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 2%;
+    }
+    .dogonebox23{
+        height: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+    }
+    .dogonebox24{
+        height: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+    }
+    .dogonebox25{
+        height: 50px;
+        color: black;
+        font-size: 30px;
+        text-align: center;
+    }
+
 }
 
+
+
+
+
+
 .dogtwobox{
+    width: 1000px;
     background-color: #809DB0; 
     margin-top: 10%;
-
+    margin-left: 20%;
     .dogtwobox1{
         color: black;
         font-size: 40px;
+        margin-left: 40%;
     }
     .dogtwobox2{
         height: 5px;
         background-color: #AD3939;
+        width: 1000px;
     }
 }
 .dogtwobox3{
     background-color: #809DB0; 
     display: flex;
-
+    width: 1000px;
+    height: auto;
+    margin-left: 20%;
 }
 .dogen{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: black; 
+    margin-left: 50px;
+    margin-top: 3cqmin;
 
 }
-
 .dog-image{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
-
 .dogtwobox4{
-    width: 800px;
-    height: 300px;
+    width: 700px;
+    height: auto;
     color: black;
-    font-size: 50px;
+    margin-top: 5%;
+    text-align: center;
+    .dogtwobox40{
+        color: black;
+        font-size: 30px;
+        margin-left: 50%;
+    }
+    .dogtwobox41{
+        color: black;
+        font-size: 30px;
+        margin-left: 50%;
+    }
+    .dogtwobox42{
+        color: black;
+        font-size: 30px;
+        margin-left: 50%;
+    }
+    .dogtwobox43{
+        color: black;
+        font-size: 30px;
+        margin-left: 49%;
+    }
+}
 
+
+
+
+.dogtwobox5{
+    color: black;
+    display: flex;
+    margin-top: 50px;
+    height: auto; 
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 70%;
+}
+@keyframes scroll-anim {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+    .dogtwobox51{
+        margin-left: 35px;
+        text-align: center;
+        .dogtwobox51a{
+            color: black;
+            font-size: 30px;
+            background-color: #AD3939;
+        }
+        .dogtwobox51b{
+            color: black;
+            font-size: 30px;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+        }
+    }
+    .dogtwobox52{
+        margin-left: 100px;
+        text-align: center;
+        .dogtwobox52a{
+            color: black;
+            font-size: 30px;
+            background-color: #AD3939;
+        }
+        .dogtwobox52b{
+            color: black;
+            font-size: 30px;
+            width: 600px;
+            height: 500px;
+            background-color: white;
+        }
+    }
+    .dogtwobox53{
+        margin-left: 100px;
+        text-align: center;
+        .dogtwobox53a{
+            color: black;
+            font-size: 30px;
+            background-color: #AD3939;
+        }
+        .dogtwobox53b{
+            color: black;
+            font-size: 30px;
+            width: 50px;
+            height: 100px;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+        }
+    }
+
+.dogtwobox51b1{
+    color: black;
+    font-size: 20px;
+    height: 70px;
+    padding: 5px;
+}
+
+
+
+
+
+.dogtwobox6{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 150px;
+    .dogtwobox61{
+        color: black;
+        font-size: 30px;
+        background-color: #AD3939;
+        width: 1400px;
+    }
+    .dogtwobox62{
+        color: black;
+        font-size: 30px;
+        width: 1400px;
+        height: 300px;
+        background-color: #5c39ad;
+    }
 }
 
 .dogthreebox{
-    background-color: #809DB0; 
     margin-top: 10px;
+    height: auto; 
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 70%;
+}
+@keyframes scroll-anim {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
 
 
     .dogthreebox1{
         font-size: 30px;
-
+        text-align: center;
         color: black;
     }
     .dogthreebox2{
+        margin: 5px;
+    } 
+    .dogthreebox20{
+        width: 100px;
         height: 5px;
         background-color: #AD3939;
-    }   
+        margin: 0 auto;
+    } 
      .dogthreebox3{
-        font-size: 30px;
+        font-size: 20px;
         color: black;
+        text-align: center;
+        font-family: "Nico Moji";
     }    
     .dogbutton{
-        font-size: 15px;
-        width: 200px;
-        height: 30px;
-        background-color: gray
+        background: #eee;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 220px;
+        padding: 10px 25px;
+        color: #313131;
+        transition: 0.3s ease-in-out;
+        font-weight: 600;
+        box-shadow: 5px 5px 0 #000000;
+        text-decoration: none;
     }
+
+.dogbutton:hover {
+    background-color: #c1c1c1;
+    box-shadow: 0 0 0;
+    transform: translate(5px, 5px);
 }
 
+
+.dogthreebox2a{
+    display: flex;
+    margin-left: 200px;
+} 
+.dogthreebox4{
+    height: 400px;
+    width: 400px;
+} 
+.dog-zemiimage1{
+    height: 400px;
+    width: 400px;
+}
+.dogthreebox40{
+    height: 400px;
+    width: 400px;
+} 
+.dog-zemiimage2{
+    height: 400px;
+    width: 400px;
+}
+.dogthreebox41{
+    height: 400px;
+    width: 400px;
+} 
+.dog-zemiimage3{
+    height: 400px;
+    width: 400px;
+}

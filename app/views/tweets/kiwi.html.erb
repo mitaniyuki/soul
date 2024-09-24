@@ -1,89 +1,133 @@
-<div class="bg_otest">
+<div class="bg_gtest">
 
     <div class="orengetitle">
         <h1>PROFILE</h1>
     </div>
 
-    <div class="orengebox">
-      <%= image_tag 'asuka.jpg', class:"orenge-image"%>
-    </div>
 
-    <div class="triangle">
-    </div>
 
-    <div class="kiwibox2">
-        <div class="purofiletitle">
-        学年：3年
-        </div>  
-        <div class="purofiletitle">
-        MBTI:INFJ
+    <div class="dogtwobox">
+        <div class="dogtwobox1">
+        副ゼミ長
         </div>
-        <div class="purofiletitle">
-        名前：中野明日花
-        </div>  
-        <div class="purofiletitle">
-        学科：マーケティング学科
-        </div>  
-        <div class="purofiletitle">
-        出身地：福島県
-        </div>   
-        <div class="purofiletitle">
-        バイト：今はやってない！
-        </div>  
-        <div class="purofiletitle">
-        趣味：ライブ、カラオケ
-        </div>  
-        <div class="purofiletitle">
-        なんでも相談してください✨
-        </div>  
-        <div class="purofiletitle">
-        アピールポイント
-        </div>  
-        <div class="purofiletitle">
-        ＃根が真面目ちゃん
-        </div>
-        <div class="purofiletitle">
-        ＃KPOP好き
+        <div class="dogtwobox2">
         </div>
     </div>
-
-
-
-
-
-    <div class="orengesend">
-        <%= link_to "新規投稿へ", new_tweet_path %>
-        <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-        <div class="tweets-container">
-        <% @tweets.each do |t| %>
-            <div class="tweet">
-            <%= t.body %>
-            <%= t.title %>
-            <%= t.user.email %>
-            <%= t.created_at %>
-
-            <span class="star-rating">
-                <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-                <span class="star-rating-back">★★★★★</span>
-            </span>
-            <% if user_signed_in? %>
-                <% if current_user.already_liked?(t) %>
-                <%= button_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
-                    <p>いいねを取り消す</p><%= t.likes.count %>
-                <% end %>
-                <% else %>
-                <%= button_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
-                    <p>いいね</p><%= t.likes.count %>
-                <% end %>
-                <% end %>
-            <% else %>
-                <p>いいねの数 = </p><%= t.likes.count %>
-            <% end %>
+    <div class="dogtwobox3">
+        <div class="dogen">
+            <%= image_tag 'asuka2.jpg', class:"dog-image"%>
+        </div>
+        <div class="dogtwobox4">
+            <div class="dogtwobox40">
+            中野明日花
             </div>
-        <% end %>
+            <div class="dogtwobox40">
+            なかの　あすか
+            </div>
+            <div class="dogtwobox41">
+            東洋大学
+            </div>
+            <div class="dogtwobox42">
+            経営学部
+            </div>
+            <div class="dogtwobox43">
+            マーケティング学科
+            </div>
         </div>
-        <div class="reversebutton">
-        <%= link_to "ゼミ生交流に戻る", tweets_apple_path %>
+    </div>
+
+
+
+    <div class="gdogtwobox5">
+        <div class="dogtwobox51">
+            <div class="dogtwobox51a">
+            共通点探し
+            </div>
+            <div class="gdogtwobox51b">
+                <div class="dogtwobox51b1">
+                血液型:O型
+                </div>
+                <div class="dogtwobox51b1">
+                バイト：カフェ、パスタ屋さん
+                </div>
+                <div class="dogtwobox51b1">
+                出身：福島県
+                </div>
+                <div class="dogtwobox51b1">
+                #韓ドラ･KPOP大好き#ENFJに憧れてるINFJ
+                </div>
+                <div class="dogtwobox51b1">
+                #おしゃれなカフェ沢山知ってます
+                </div>
+            </div>
+        </div>
+        <div class="dogtwobox52">
+            <div class="dogtwobox52a">
+            メッセージ
+            </div>
+            <div class="gdogtwobox52b">
+                <div class="dogtwobox51b1">
+                大学生活を充実させてくれる素敵なゼミです！
+                </div>
+                <div class="dogtwobox51b1">
+                大変なことも一緒に乗り越えれる仲間を作ることができるので
+                </div>
+                <div class="dogtwobox51b1">
+                是非中野ゼミ生に来てください✨️
+                </div>
+            </div>
+        </div>
+        <div class="dogtwobox53">
+            <div class="dogtwobox53a">
+            趣味
+            </div>
+            <div class="gdogtwobox53b">
+                <div class="dogtwobox51b1">
+                ライブ参戦
+                </div>
+                <div class="dogtwobox51b1">
+                カフェ巡り
+                </div>
+                <div class="dogtwobox51b1">
+                歌うこと
+                </div>
+                <div class="dogtwobox51b1">
+                写真を撮ること
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dogtwobox6">
+        <div class="dogtwobox61">
+        好きな〇〇
+        </div>
+        <div class="dogtwobox62">
+            <div class="dogtwobox51b1">
+            好きな食べ物:チーズ、アボカド
+            </div>
+            <div class="dogtwobox51b1">
+            好きな映画:実写版のアラジン
+            </div>
+            <div class="dogtwobox51b1">
+            好きなお菓子:トッポ
+            </div>
+            <div class="dogtwobox51b1">
+            好きなアニメか漫画:神様はじめました、君に届け
+            </div>
+            <div class="dogtwobox51b1">
+            好きな音楽:K-POP
+            </div>
+            <div class="dogtwobox51b1">
+            好きな場所、観光地:韓国のカフェ
+            </div>
         </div>
     </div>
 </div>
+    
+
+
+
+
+
+

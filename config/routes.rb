@@ -18,6 +18,14 @@ Rails.application.routes.draw do
   get 'tweets/grape'  => 'tweets#grape'
   get 'tweets/kiwi'  => 'tweets#kiwi'
   get 'tweets/mango'  => 'tweets#mango'
+  get 'tweets/pear'  => 'tweets#pear'
+  get 'tweets/berry'  => 'tweets#berry'
+  get 'tweets/peach'  => 'tweets#peach'
+  get 'tweets/cherry'  => 'tweets#cherry'
+  get 'tweets/lemon'  => 'tweets#lemon'
+  get 'tweets/tomato'  => 'tweets#tomato'
+  get 'tweets/melon'  => 'tweets#melon'
+  get 'tweets/corn'  => 'tweets#corn'
 
 
   resources :tweets do

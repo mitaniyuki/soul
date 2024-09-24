@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ @import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
 
  * {
     padding: 0;
@@ -24,7 +28,7 @@
     Kaisei Decol, "Kaisei Decol", Kaisei Decol;
   }
   header {
-    background-color: #DB592A;
+    background-color: #233B6C;
     height: 80px;
     font-weight: bold;
     display: flex;
@@ -64,5 +68,30 @@ header li {
   width: 75px;
   height: 75px;
   margin-left: 300px;
+}
+
+
+
+
+
+footer {
+  height: 80px;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: flex-end;
+}
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+
+
+
+.fa-instagram{
+
+  color: white
 }
 

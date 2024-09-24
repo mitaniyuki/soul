@@ -1,8 +1,9 @@
 .bg_atest {
-    height: 2100px;                  
+    height: 4500px;                  
     padding:  5px;                             
     background-color: #403B47;   
 }
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
 
 .appletitle {
     font-size: 30px;
@@ -12,6 +13,8 @@
     animation-duration:0.5s;
     animation-fill-mode:forwards;
     opacity:0;
+    margin-left: 10%;
+    font-family: 'Cherry Swash', cursive;
 }
         
 @keyframes fadeLeftAnime{
@@ -28,11 +31,109 @@
 
 .appleexplain {
     width: 1550px;
-    height: 400px;
-    font-size: 30px;
+    height: 350px;
     margin-top: 100px; 
     margin-left: 4%;                     
-    background-color: #D9D9D9;   
+    background-color: white;   
+}
+.appleexplain1 {
+    width: 1550px;
+    height: 60px;
+    font-size: 30px;  
+    text-align: center;
+}
+.appleexplain2 {
+    width: 1550px;
+    height: 60px;
+    font-size: 30px;     
+    text-align: center;               
+}
+.appleexplain3 {
+    width: 1550px;
+    height: 60px;
+    font-size: 30px; 
+    text-align: center;
+}
+.appleexplain4 {
+    width: 1550px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.appleexplain5 {
+    width: 1550px;
+    height: 60px;
+    font-size: 30px; 
+    text-align: center;
+}
+.appleexplain6 {
+    width: 1550px;
+    height: 60px;
+    font-size: 30px; 
+    text-align: center; 
+}
+
+.appleexplaintwo {
+    width: 1550px;
+    height: 430px;
+    margin-top: 100px; 
+    margin-left: 4%;                     
+    background-color: #FFE17A;   
+}
+.appleexplaintwo0 {
+    width: 1550px;
+    font-size: 30px;  
+    color: #AD3939;
+}
+.appleexplaintwo1 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;
+}
+.appleexplaintwo2 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;                  
+}
+.appleexplaintwo3 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
+}
+.appleexplaintwo4 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
+}
+.appleexplaintwo5 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
+}
+.appleexplaintwo6 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;   
+}
+.appleexplaintwo7 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
+}
+.appleexplaintwo8 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
+}
+.appleexplaintwo9 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
+}
+.appleexplaintwo10 {
+    width: 1550px;
+    font-size: 20px;  
+    color: #AD3939;  
 }
 
 
@@ -47,6 +148,7 @@
 .applebuttonbox-big{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 5%;
 }
 
 .applebuttonbox {
@@ -73,12 +175,25 @@
 
 
 .applebutton {
-    font-size: 25px;
-    width: 300px;
-    height: 30px;   
-    margin-top: 100px;
-    text-align: center;
-    background-color: #DB592A;
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    box-shadow: 5px 5px 0 #000000;
+    text-decoration: none;
+}
+
+.applebutton:hover {
+    background-color: #c1c1c1;
+    box-shadow: 0 0 0;
+    transform: translate(5px, 5px);
 }
 
 .applecontext {

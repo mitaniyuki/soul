@@ -42,6 +42,30 @@ class TweetsController < ApplicationController
     def mango
         @tweets = Tweet.all
     end
+    def pear
+
+    end
+    def berry
+
+    end
+    def peach
+
+    end
+    def cherry
+
+    end
+    def lemon
+
+    end
+    def tomato
+
+    end
+    def melon
+
+    end
+    def corn
+
+    end
 
     
     def create
