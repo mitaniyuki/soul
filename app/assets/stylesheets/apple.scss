@@ -1,14 +1,14 @@
 .bg_atest {
-    height: 4500px;                  
+    height: 5000px;                  
     padding:  5px;                             
-    background-color: #403B47;   
+    background-color: #FFF8E1;   
 }
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
 
 .appletitle {
     font-size: 30px;
     height: 200px;   
-    color: #D9D9D9;
+    color: black;
     animation-name:fadeLeftAnime;
     animation-duration:0.5s;
     animation-fill-mode:forwards;
@@ -36,6 +36,7 @@
     margin-left: 4%;                     
     background-color: white;   
 }
+
 .appleexplain1 {
     width: 1550px;
     height: 60px;
@@ -141,7 +142,7 @@
     margin-top: 5%;
     height: 30px;   
     font-size: 25px;
-    background-color: #FFE17A;   
+    background-color: #E3E7FF;   
     text-align: center;
 }
 
@@ -151,18 +152,45 @@
     margin-top: 5%;
 }
 
+
 .applebuttonbox {
     width: 300px; 
     margin-left: 250px;
-    margin-right: 250px;
+    margin-right: 250px; 
+    margin-top: 5%;
+}
+.applebuttonbox1 {
+    width: 300px; 
+    margin-left: 250px;
+    margin-right: 250px; 
+    margin-top: 5%;
     
 }
+.applebuttonbox2 {
+    width: 300px; 
+    margin-left: 250px;
+    margin-right: 250px; 
+    margin-top: 5%;
+}
+.applebuttonbox3 {
+    width: 300px; 
+    margin-left: 250px;
+    margin-right: 250px; 
+    margin-top: 5%;
+}
+.applebuttonbox4 {
+    width: 300px; 
+    margin-left: 250px;
+    margin-right: 250px; 
+    margin-top: 5%;
+}
+
 
 .applebox {
     width: 275px;
     height: 275px;  
     margin-top: 20px;
-    background-color: #DB592A;  
+    background-color: #FFE693;  
     padding-top: 25px;
     padding-left: 25px;
 
@@ -199,6 +227,6 @@
 .applecontext {
     font-size: 25px; 
     text-align: center;
-    color: #D9D9D9;
+    color: black;
 }
 
