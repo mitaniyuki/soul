@@ -4,7 +4,6 @@
     background-color: #FFF8E1;   
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 
 .dogtitle {
     height: 100px;                  
@@ -15,7 +14,7 @@
     animation-fill-mode:forwards;
     opacity:0;
     margin-left: 10%;
-    font-family: 'Amatic SC', cursive;
+    font-family: "Hannari";
 }
         
 @keyframes fadeLeftAnime{
@@ -133,27 +132,27 @@
     width: 700px;
     height: auto;
     color: black;
-    margin-top: 5%;
     text-align: center;
+    padding: 10%;
     .dogtwobox40{
         color: black;
-        font-size: 30px;
-        margin-left: 50%;
+        font-size: 60px;
+        text-align: center;
     }
     .dogtwobox41{
         color: black;
         font-size: 30px;
-        margin-left: 50%;
+        text-align: center;
     }
     .dogtwobox42{
         color: black;
         font-size: 30px;
-        margin-left: 50%;
+        text-align: center;
     }
     .dogtwobox43{
         color: black;
         font-size: 30px;
-        margin-left: 49%;
+        text-align: center;
     }
 }
 
