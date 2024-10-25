@@ -76,13 +76,17 @@ header li {
 
 footer {
   height: 80px;
-  background-color: black;
+  background-color: #233B6C;
+  height: 60px;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   position: fixed;
-  justify-content: flex-end;
+  justify-content: center; /* アイテムを中央に配置 */
+  gap: 20px; /* アイコン間のスペースを設定 */
+  padding: 10px;
+
 }
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
@@ -91,7 +95,9 @@ footer {
 
 
 .fa-instagram{
-
+  color: #FF0085
+}
+.fa-book{
   color: white
 }
 

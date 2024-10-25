@@ -149,11 +149,13 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 5%;
+    justify-content: center;
+    margin-right: 20px;
 }
 
 
 .applebuttonbox {
-    width: 300px; 
+    width: auto; 
     margin-left: 250px;
     margin-right: 250px; 
     margin-top: 5%;
