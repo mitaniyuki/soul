@@ -29,10 +29,11 @@
 }
 
 .appleexplain {
-    width: 1550px;
+    width: auto;
     height: 350px;
     margin-top: 100px; 
-    margin-left: 4%;                     
+    margin-left: 4%;  
+    margin-right: 4%;                                        
     background-color: white;   
 }
 
@@ -74,10 +75,11 @@
 }
 
 .appleexplaintwo {
-    width: 1550px;
+    width: auto;
     height: 430px;
     margin-top: 100px; 
-    margin-left: 4%;                     
+    margin-left: 4%;      
+    margin-right: 4%;                
     background-color: #FFE17A;   
 }
 .appleexplaintwo0 {
@@ -151,38 +153,39 @@
     margin-top: 5%;
     justify-content: center;
     margin-right: 20px;
+    gap: 10px;
 }
 
 
 .applebuttonbox {
     width: auto; 
-    margin-left: 250px;
-    margin-right: 250px; 
+    margin-left: 150px; /* 必要に応じて調整 */
+    margin-right: 150px; /* 必要に応じて調整 */
     margin-top: 5%;
 }
 .applebuttonbox1 {
-    width: 300px; 
-    margin-left: 250px;
-    margin-right: 250px; 
+    width: auto; 
+    margin-left: 150px; /* 必要に応じて調整 */
+    margin-right: 150px; /* 必要に応じて調整 */
     margin-top: 5%;
     
 }
 .applebuttonbox2 {
-    width: 300px; 
-    margin-left: 250px;
-    margin-right: 250px; 
+    width: auto; 
+    margin-left: 150px; /* 必要に応じて調整 */
+    margin-right: 150px; /* 必要に応じて調整 */
     margin-top: 5%;
 }
 .applebuttonbox3 {
-    width: 300px; 
-    margin-left: 250px;
-    margin-right: 250px; 
+    width: auto; 
+    margin-left: 150px; /* 必要に応じて調整 */
+    margin-right: 150px; /* 必要に応じて調整 */
     margin-top: 5%;
 }
 .applebuttonbox4 {
-    width: 300px; 
-    margin-left: 250px;
-    margin-right: 250px; 
+    width: auto; 
+    margin-left: 150px; /* 必要に応じて調整 */
+    margin-right: 150px; /* 必要に応じて調整 */
     margin-top: 5%;
 }
 
