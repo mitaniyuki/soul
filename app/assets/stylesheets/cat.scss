@@ -1,172 +1,165 @@
-.bg_ctest {              
-    padding:  5px;                             
-    background-color: #FFF8E1;   
+/* ============================
+   ACTIVITY PAGE
+   ============================ */
+:root {
+  --act-bg: #fef8ee;
+  --act-ink: #1a1a1a;
+  --act-brand: #9C312D;
+  --act-accent: #233B6C;
+  --act-card: #ffffff;
+  --act-radius: 16px;
+  --act-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.cattitle {
-    height: 200px;                  
-    font-size: 30px;                           
-    animation-name:fadeLeftAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-    margin-left: 10%;
-    font-family: "Hannari";
+/* 全体 */
+.activity-page {
+  background: var(--act-bg);
+  color: var(--act-ink);
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  padding-bottom: 4rem;
 }
-        
-@keyframes fadeLeftAnime{
-    from {
+
+/* タイトルセクション */
+.activity-hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(120deg, var(--act-accent), #4b5fa5);
+  color: #fff;
+}
+.activity-hero h1 {
+  font-family: "Hannari", serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.activity-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.9;
+}
+
+/* 導入部 */
+.activity-intro {
+  background: var(--act-card);
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: var(--act-radius);
+  box-shadow: var(--act-shadow);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.activity-intro h2 {
+  color: var(--act-brand);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+.activity-intro p {
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  margin-bottom: 1rem;
+}
+.activity-intro ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.activity-intro li {
+  background: #fff4f3;
+  color: var(--act-brand);
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 各活動セクション */
+.activity-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 3.5rem auto;
+  padding: 2rem 1rem;
+  background: var(--act-card);
+  border-radius: var(--act-radius);
+  box-shadow: var(--act-shadow);
+}
+.activity-section.reverse {
+  flex-direction: row-reverse;
+}
+.activity-img {
+  flex: 1 1 280px;
+  text-align: center;
+}
+.activity-photo {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.activity-text {
+  flex: 1 1 380px;
+}
+.activity-text h3 {
+  color: var(--act-brand);
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 0.8rem;
+  border-left: 6px solid var(--act-brand);
+  padding-left: 0.6rem;
+}
+.activity-text p {
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  color: var(--act-ink);
+}
+
+/* 年間表・スケジュール */
+.activity-schedule,
+.activity-week {
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 1000px;
+}
+.activity-schedule h2,
+.activity-week h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--act-brand);
+  margin-bottom: 1.4rem;
+}
+.activity-schedule-img,
+.activity-week-img {
+  width: 100%;
+  max-width: 850px;
+  border-radius: var(--act-radius);
+  box-shadow: var(--act-shadow);
+}
+
+/* スクロールフェード */
+@media (prefers-reduced-motion: no-preference) {
+  .activity-section {
     opacity: 0;
-    transform: translateX(-100px);
-    }
-        
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  @keyframes fadeInUp {
     to {
-    opacity: 1;
-    transform: translateX(0);
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 }
 
-.catonebox{
-    height: auto;
-    background-color: white;
-
-    .catonebox1{
-        width: 500px;
-        height: 90px;
-        color: black;
-        font-size: 40px;
-        margin-left: 10%;
-    }
-    .catonebox2{
-        height: 10px;
-        color: black;
-        font-size: 20px;
-        text-align: center;
-        padding: 50px; 
-    }
-    .catonebox20{
-        color: red;
-        height: 10px;
-        font-size: 30px;
-        padding: 50px; 
-        text-align: center;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-.cattwobox{
-
-    margin-top: 10%;
-    background-color: white;
-
-}
-.cattwoboxmini{
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .activity-section {
     flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-}
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-
-.caten{
-    width: 300px;
-    height: 300px;
-    border-radius: 60%;
-    background-color: black; 
-    margin: 0 auto;
-
-
-}
-
-.cat-image{
-    width: 300px;
-    height: 300px;
-    border-radius: 60%;
-}
-.cattwobox10{
-    height: 10px;
-    color: red;
-    font-size: 30px;
-    text-align: center;
-    padding: 50px; 
-}
-.cattwobox1{
-    height: 10px;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    padding: 50px; 
-}
-
-
-
-.catfivebox{
-    height: 700px;
-    margin-top: 5%;
-
-    .catfivebox1{
-        height: 90px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .catfivebox2{
-        height: 500px;
-        width: 900px;
-        color: black;
-        background-color: #D9D9D9;
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-    .catone-image{
-        height: 500px;
-        width: 900px;
-    }
-}
-.catsixbox{
-    height: 700px;
-    margin-top: 5%;
-
-    .catsixbox1{
-        height: 90px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-
-    }
-    .catsixbox2{
-        height: 500px;
-        width: 900px;
-        color: black;
-        background-color: #D9D9D9;
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-    .cattwo-image{
-        height: 500px;
-        width: 900px;
-    
-    }
+    gap: 1.5rem;
+  }
+  .activity-photo {
+    max-width: 260px;
+  }
 }

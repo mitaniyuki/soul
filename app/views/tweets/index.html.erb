@@ -1,115 +1,66 @@
+<div class="nakanozemi-page">
 
+  <!-- Hero Section -->
+  <header class="nakanozemi-hero">
+    <div class="nakanozemi-hero-overlay"></div>
 
-<div class="bg_test">
-  <div class="main">
-    <div class="main1">
-      <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
-      <h3>本気のゼミ。</h3>
+    <div class="nakanozemi-hero-content">
+      <p class="nakanozemi-hero-catch">本気のゼミ。それが</p>
+      <h1 class="nakanozemi-hero-title">中野ゼミ。</h1>
+      <p class="nakanozemi-hero-sub">挑戦・つながり・成長を、ここで。</p>
+      <div class="nakanozemi-scroll">▼ Scroll ▼</div>
     </div>
-    <div class="main2">
-      <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
-      <h2>それが</h2>
-    </div>
-    <div class="main3">
-      <h1>中野ゼミ。</h1>
-    </div>
-    
-  </div>
+  </header>
 
-    <div class="box">
-      <div class="title">
-        about us
-      </div>    
-      <div class="about">
-      
-        <div class="about1">
-         <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
-          中野ゼミってどんなゼミ？
-        </div>
-        <div class="about2">
-          何をしているゼミなの？
-        </div>
-        <div class="about2">
-          活動時間は？中野ゼミってどんなゼミ？
-        </div>
-        <div class="about2">
-          中野ゼミってどんなゼミ？
-        </div>
-        <div class="button">
-          <%= link_to "read more", tweets_job_path %>
-        </div>
+  <!-- About -->
+  <section class="nakanozemi-section">
+    <h2 class="nakanozemi-title">about us</h2>
+    <div class="nakanozemi-card nakanozemi-card--red">
+      <h3 class="nakanozemi-card-title">中野ゼミってどんなゼミ？</h3>
+      <p class="nakanozemi-card-text">主体的に学び、挑戦し続けることを大切にしています。</p>
+      <p class="nakanozemi-card-text">メンバー同士の協力と刺激があふれる環境です。</p>
+      <div class="nakanozemi-card-action">
+        <%= link_to "read more", tweets_job_path, class: "nakanozemi-button" %>
       </div>
     </div>
+  </section>
 
-
-    <div class="box1">
-      <div class="title">
-      member
-      </div>    
-      <div class="indexabout">
-        <div class="about1">
-          "ちょっと濃いめの人間関係"
-        </div>
-        <div class="iabout2">
-          これは、ゼミ生で決めたスローガンです
-        </div>
-        <div class="iabout2">
-        とにかく仲のいいゼミ生や
-        </div>
-        <div class="iabout2">
-          指導教員
-        </div>
-        <div class="iabout2">
-          の紹介をしていますよ！
-        </div>
-        <div class="button">
-          <%= link_to "read more", tweets_dog_path %>
-        </div>
+  <!-- Member -->
+  <section class="nakanozemi-section nakanozemi-section--alt">
+    <h2 class="nakanozemi-title">member</h2>
+    <div class="nakanozemi-card nakanozemi-card--blue">
+      <h3 class="nakanozemi-card-title">"ちょっと濃いめの人間関係"</h3>
+      <p class="nakanozemi-card-text">ゼミ生は仲間であり、刺激し合う存在。</p>
+      <p class="nakanozemi-card-text">お互いの成長を全力で応援しています。</p>
+      <div class="nakanozemi-card-action">
+        <%= link_to "read more", tweets_dog_path, class: "nakanozemi-button" %>
       </div>
     </div>
+  </section>
 
-    <div class="box">
-      <div class="title">
-        activities
-      </div>  
-      <div class="indexabout1">  
-        <div class="about1">
-          中野ゼミでは何ができる？
-        </div>
-        <div class="about2">
-          なんでもできるよ！
-        </div>
-        <div class="about2">
-        ゼミの活動は主に3つあります。
-        </div>
-        <div class="button">
-          <%= link_to "read more", tweets_cat_path %>
-        </div>
+  <!-- Activities -->
+  <section class="nakanozemi-section">
+    <h2 class="nakanozemi-title">activities</h2>
+    <div class="nakanozemi-card nakanozemi-card--green">
+      <h3 class="nakanozemi-card-title">中野ゼミでは何ができる？</h3>
+      <p class="nakanozemi-card-text">ビジネス創造・研究発表・フィールドワークなど多彩な活動。</p>
+      <div class="nakanozemi-card-action">
+        <%= link_to "read more", tweets_cat_path, class: "nakanozemi-button" %>
       </div>
     </div>
+  </section>
 
-    <div class="box1">
-      <div class="title1">
-        exchange seminar member
-      </div>    
-      <div class="indexabout2">
-        <div class="about1">
-          ゼミ選びに迷っているそこの君！
-        </div>
-        <div class="about2">
-         ゼミの先輩が詳しく教えるよ！
-        </div>
-        <div class="about2">
-          中野ゼミのことだけでなく他ゼミの特徴やゼミの選び方を教えてもらおう！！
-        </div>
-        <div class="button">
-          <%= link_to "read more", tweets_apple_path %>
-        </div>
+  <!-- Exchange -->
+  <section class="nakanozemi-section nakanozemi-section--alt">
+    <h2 class="nakanozemi-title">exchange seminar member</h2>
+    <div class="nakanozemi-card nakanozemi-card--purple">
+      <h3 class="nakanozemi-card-title">ゼミ選びに迷っているそこの君！</h3>
+      <p class="nakanozemi-card-text">先輩がリアルなゼミ選びの体験談を伝えます。</p>
+      <p class="nakanozemi-card-text">ゼミ選びのヒントを、ここで掴もう！</p>
+      <div class="nakanozemi-card-action">
+        <%= link_to "read more", tweets_apple_path, class: "nakanozemi-button" %>
       </div>
     </div>
-
+  </section>
 
 </div>
-
-
-

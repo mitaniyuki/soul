@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   end
 
 
-  root 'tweets#top'
+  root 'tweets#index'
 
 
   

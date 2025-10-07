@@ -10,36 +10,47 @@
   <%= javascript_importmap_tags %>
 
 
-</head>
-  <body>
-  <header>
-   <div class="header-list">
-    <ul>
-      <li><%= link_to "top", tweets_path %></li>
-      <li><%= link_to "about us",tweets_job_path %></li>
-      <li><%= link_to "member",tweets_dog_path %></li>
-      <li><%= link_to "activity",tweets_cat_path %></li>
-      <li><%= link_to "ゼミ生交流",tweets_apple_path %></li>
-    </ul>
-   </div>
-  </header>
-  <main>
-   <%= yield %>
-  </main>
- 
-
-   
-  <footer>
-    <%= link_to "https://www.instagram.com/nakanozemi.toyo/" do %> 
-      <i class="fa-brands fa-instagram fa-3x faa-wrench animated-hover"></i>
+<header class="nz-header">
+  <div class="nz-header-inner">
+    <!-- Brand -->
+    <%= link_to tweets_path, class: "nz-brand" do %>
+      <span class="nz-brand-ja">中野ゼミ</span>
+      <span class="nz-brand-en">Nakanosemi</span>
     <% end %>
 
-    <%= link_to "http://toyoblog.nakano-seminar.jp/#gsc.tab=0" do %> 
-      <i class="fa-solid fa-book fa-3x faa-wrench animated-hover"></i>
-    <% end %>
+    <!-- Burger (mobile) -->
+    <input type="checkbox" id="nz-nav-toggle" class="nz-nav-toggle" aria-label="toggle navigation">
+    <label for="nz-nav-toggle" class="nz-burger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </label>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
-  </footer>
-  </body>
+    <!-- Nav -->
+    <nav class="nz-nav">
+      <ul class="nz-nav-list">
+        <li><%= link_to "top", tweets_path %></li>
+        <li><%= link_to "about us", tweets_job_path %></li>
+        <li><%= link_to "member", tweets_dog_path %></li>
+        <li><%= link_to "activity", tweets_cat_path %></li>
+        <li><%= link_to "ゼミ生交流", tweets_apple_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <%= yield %>
+</main>
+
+<footer class="nz-footer">
+  <%= link_to "https://www.instagram.com/nakanozemi.toyo/" do %>
+    <i class="fa-brands fa-instagram fa-2x faa-wrench animated-hover"></i>
+  <% end %>
+  <%= link_to "http://toyoblog.nakano-seminar.jp/#gsc.tab=0" do %>
+    <i class="fa-solid fa-book fa-2x faa-wrench animated-hover"></i>
+  <% end %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" media="all" />
+</footer>
+
+
  
 </html>

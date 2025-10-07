@@ -1,236 +1,171 @@
-.bg_atest {
-    height: 5000px;                  
-    padding:  5px;                             
-    background-color: #FFF8E1;   
+/* ======================================
+   EXCHANGE SEMINAR MEMBER – Link Hub
+   ====================================== */
+:root{
+  --esm-bg: #fdf6e5;
+  --esm-ink: #1a1a1a;
+  --esm-ink-muted: #5b5b5b;
+  --esm-brand: #9C312D;   /* 中野ゼミの赤 */
+  --esm-accent: #233B6C;  /* ネイビー */
+  --esm-card: #ffffff;
+  --esm-soft: #fff4f3;
+  --esm-radius: 18px;
+  --esm-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
-.appletitle {
-    font-size: 30px;
-    height: 200px;   
-    color: black;
-    animation-name:fadeLeftAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-    margin-left: 10%;
-    font-family: "Hannari";
-}
-        
-@keyframes fadeLeftAnime{
-    from {
-    opacity: 0;
-    transform: translateX(-100px);
-    }
-        
-    to {
-    opacity: 1;
-    transform: translateX(0);
-    }
+.esm-page{
+  background: var(--esm-bg);
+  color: var(--esm-ink);
+  font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.9;
+  font-size: clamp(1rem, 2.2vw, 1.08rem);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 4rem;
 }
 
-.appleexplain {
-    width: auto;
-    height: 350px;
-    margin-top: 100px; 
-    margin-left: 4%;  
-    margin-right: 4%;                                        
-    background-color: white;   
+/* ---------- HERO ---------- */
+.esm-hero{
+  background: linear-gradient(120deg, var(--esm-accent), #4b5fa5);
+  color: #fff;
+  text-align: center;
+  padding: 4.5rem 1rem 3rem;
+}
+.esm-hero__title{
+  font-family: "Hannari","Noto Sans JP",sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: .12em;
+  margin: 0 0 .4rem;
+}
+.esm-hero__sub{
+  margin: 0;
+  opacity: .95;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
 }
 
-.appleexplain1 {
-    width: 1550px;
-    height: 60px;
-    font-size: 30px;  
-    text-align: center;
-}
-.appleexplain2 {
-    width: 1550px;
-    height: 60px;
-    font-size: 30px;     
-    text-align: center;               
-}
-.appleexplain3 {
-    width: 1550px;
-    height: 60px;
-    font-size: 30px; 
-    text-align: center;
-}
-.appleexplain4 {
-    width: 1550px;
-    height: 60px;
-    font-size: 30px;
-    text-align: center;
-}
-.appleexplain5 {
-    width: 1550px;
-    height: 60px;
-    font-size: 30px; 
-    text-align: center;
-}
-.appleexplain6 {
-    width: 1550px;
-    height: 60px;
-    font-size: 30px; 
-    text-align: center; 
+/* ---------- Section Head ---------- */
+.esm-h2{
+  text-align: center;
+  color: var(--esm-brand);
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  letter-spacing: .06em;
+  margin: 2.2rem 0 .6rem;
 }
 
-.appleexplaintwo {
-    width: auto;
-    height: 430px;
-    margin-top: 100px; 
-    margin-left: 4%;      
-    margin-right: 4%;                
-    background-color: #FFE17A;   
+/* ---------- Intro ---------- */
+.esm-intro{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
 }
-.appleexplaintwo0 {
-    width: 1550px;
-    font-size: 30px;  
-    color: #AD3939;
-}
-.appleexplaintwo1 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;
-}
-.appleexplaintwo2 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;                  
-}
-.appleexplaintwo3 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
-}
-.appleexplaintwo4 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
-}
-.appleexplaintwo5 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
-}
-.appleexplaintwo6 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;   
-}
-.appleexplaintwo7 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
-}
-.appleexplaintwo8 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
-}
-.appleexplaintwo9 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
-}
-.appleexplaintwo10 {
-    width: 1550px;
-    font-size: 20px;  
-    color: #AD3939;  
+.esm-intro__lead{
+  margin: 0 auto 1.2rem;
+  color: var(--esm-ink);
 }
 
+/* ---------- Main Cards ---------- */
+.esm-cards{
+  max-width: 1100px;
+  margin: 1.2rem auto 0;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+.esm-card{
+  background: var(--esm-card);
+  border-radius: var(--esm-radius);
+  box-shadow: var(--esm-shadow);
+  padding: 1.4rem 1.1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.esm-card__media{
+  text-align: center;
+  margin-bottom: .6rem;
+}
+.esm-card__media .fa-instagram{ color: #E1306C; font-size: 2.4rem; }
+.esm-card__media .fa-book-open{ color: #364fc7; font-size: 2.4rem; }
+.esm-card__media .fa-building-columns{ color: #0d9488; font-size: 2.4rem; }
 
-.appleline {
-    margin-top: 5%;
-    height: 30px;   
-    font-size: 25px;
-    background-color: #E3E7FF;   
-    text-align: center;
+.esm-card__title{
+  margin: .2rem 0 .2rem;
+  color: var(--esm-brand);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+  text-align: center;
+}
+.esm-card__text{
+  color: var(--esm-ink);
+  margin: .2rem 0 1rem;
+  text-align: center;
+}
+.esm-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: var(--esm-brand);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: .7rem 1.2rem;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.25);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.esm-btn:hover{
+  background: #7a1e1b;
+  box-shadow: none;
+  transform: translate(3px,3px);
 }
 
-.applebuttonbox-big{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5%;
-    justify-content: center;
-    margin-right: 20px;
-    gap: 10px;
+/* ---------- Quick Links ---------- */
+.esm-quick{
+  max-width: 1100px;
+  margin: 2.2rem auto 0;
+  padding: 0 1rem;
+}
+.esm-quick__grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: .8rem;
+}
+.esm-chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: var(--esm-soft);
+  color: var(--esm-brand);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: .6rem 1rem;
+  transition: transform .2s ease, background .2s ease;
+}
+.esm-chip:hover{ transform: translateY(-2px); background: #ffe9e6; }
+
+/* ---------- Note ---------- */
+.esm-note{
+  max-width: 1000px;
+  margin: 1.6rem auto 0;
+  padding: 0 1rem;
+}
+.esm-note__text{
+  text-align: center;
+  color: var(--esm-ink-muted);
+  font-size: .98rem;
 }
 
-
-.applebuttonbox {
-    width: auto; 
-    margin-left: 150px; /* 必要に応じて調整 */
-    margin-right: 150px; /* 必要に応じて調整 */
-    margin-top: 5%;
+/* ---------- Responsive ---------- */
+@media (max-width: 960px){
+  .esm-cards{ grid-template-columns: 1fr 1fr; }
+  .esm-quick__grid{ grid-template-columns: 1fr 1fr; }
 }
-.applebuttonbox1 {
-    width: auto; 
-    margin-left: 150px; /* 必要に応じて調整 */
-    margin-right: 150px; /* 必要に応じて調整 */
-    margin-top: 5%;
-    
+@media (max-width: 640px){
+  .esm-cards{ grid-template-columns: 1fr; }
+  .esm-quick__grid{ grid-template-columns: 1fr; }
 }
-.applebuttonbox2 {
-    width: auto; 
-    margin-left: 150px; /* 必要に応じて調整 */
-    margin-right: 150px; /* 必要に応じて調整 */
-    margin-top: 5%;
-}
-.applebuttonbox3 {
-    width: auto; 
-    margin-left: 150px; /* 必要に応じて調整 */
-    margin-right: 150px; /* 必要に応じて調整 */
-    margin-top: 5%;
-}
-.applebuttonbox4 {
-    width: auto; 
-    margin-left: 150px; /* 必要に応じて調整 */
-    margin-right: 150px; /* 必要に応じて調整 */
-    margin-top: 5%;
-}
-
-
-.applebox {
-    width: 275px;
-    height: 275px;  
-    margin-top: 20px;
-    background-color: #FFE693;  
-    padding-top: 25px;
-    padding-left: 25px;
-
-    .apple-image{
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-    }
-}
-
-
-.applebutton {
-    background: #eee;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 220px;
-    padding: 10px 25px;
-    color: #313131;
-    transition: 0.3s ease-in-out;
-    font-weight: 600;
-    box-shadow: 5px 5px 0 #000000;
-    text-decoration: none;
-}
-
-.applebutton:hover {
-    background-color: #c1c1c1;
-    box-shadow: 0 0 0;
-    transform: translate(5px, 5px);
-}
-
-.applecontext {
-    font-size: 25px; 
-    text-align: center;
-    color: black;
-}
-

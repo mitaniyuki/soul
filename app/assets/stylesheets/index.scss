@@ -1,185 +1,173 @@
-
-.bg_test {
-    height: 2900px;                  
-    padding:  5px;                             
-    background-color: #FFEEB9; 
-}
-
-.main{
-    font-size: 50px;
-    width: 600px;
-    height: 400px;
-    margin-left: 30%;
-    margin-top: 100px;
-    .main1{
-        font-size: 30px;
-        width: 600px;
-        height: 100px;
-        margin-left: 30%;
-        font-family: "Kokoro";
-
-    }
-    .main2{
-        font-size: 40px;
-        width: 600px;
-        height: 100px;
-        margin-left: 30%;
-        font-family: "Kokoro";
-    }
-    .main3{
-        font-size: 50px;
-        width: 600px;
-        height: 200px;
-        margin-left: 15%;
-        color: #9C312D;
-    }
-}
-
-.box{
-    width: 900px;
-    margin-top: 100px;
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
-}   
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-.box1{
-    width: 900px;
-    margin-left: 46%;
-    margin-top: 100px;
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
-}
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-.title{
-    font-family: 'Amatic SC', cursive;
-    font-size: 60px;
-    width: 800px; 
-    height: auto; 
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-.title1{
-    font-family: 'Amatic SC', cursive;
-    font-size: 60px;
-    width: 800px; 
-    height: auto; 
-}
-
-
-
-.about{
-    font-size: 40px;
-    width: 900px;
-    height: auto;
-    background-color: white;
-    box-shadow: 50px 50px 0 #AD3939;
-
-}
-
-.about1{
-    font-size: 40px;
-    height: 90px;
-    color: black;
-    text-align: center;
-    font-family: "Nico Moji";
-}
-
-.about2{
-    font-size: 30px;
-    height: auto;
-    color: black;
-    text-align: center;
-}
-.iabout1{
-    font-size: 40px;
-    height: 90px;
-    color: black;
-    text-align: center;
-}
-
-.iabout2{
-    font-size: 30px;
-    height: auto;
-    color: black;
-    text-align: center;
-}
-
-
-
-.button{
-    background: #eee;
+/* ==============================================
+   Nakano Seminar (Sass-safe)
+   ============================================== */
+   :root {
+    --nz-brand: #9C312D;
+    --nz-bg: #FFF8E1;
+    --nz-text: #1f1f1f;
+    --nz-radius: 1.2rem;
+  
+    --nz-shadow-red: #AD3939;
+    --nz-shadow-blue: #5C7BEC;
+    --nz-shadow-green: #008000;
+    --nz-shadow-purple: #7A4980;
+  
+    /* max-width: min(1100px, 92vw) の代替 */
+    --nz-maxw: clamp(0px, 92vw, 1100px);
+  }
+  
+  /* 全体 */
+  .nakanozemi-page {
+    background: var(--nz-bg);
+    color: var(--nz-text);
+    font-family: "Kokoro","Noto Sans JP",system-ui,sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* ---------- Hero ---------- */
+  .nakanozemi-hero {
     position: relative;
+    height: 100vh;
+    background: linear-gradient(120deg,#FFD2A0 0%,#FFB5A7 50%,#FFEEB9 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    max-width: 220px;
-    padding: 10px 25px;
-    color: #313131;
-    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .nakanozemi-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(3px);
+  }
+  
+  .nakanozemi-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--nz-maxw);
+    padding: 0 1rem;
+  }
+  
+  .nakanozemi-hero-catch {
+    /* 1.3rem〜2.2remの範囲で画面幅連動 (真ん中はvwのみ) */
+    font-size: clamp(1.3rem, 2.4vw, 2.2rem);
+    margin: 0 0 .3em;
     font-weight: 600;
-    box-shadow: 5px 5px 0 #000000;
-    text-decoration: none;
-}
+    letter-spacing: .05em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+  }
+  
+  .nakanozemi-hero-title {
+    /* 2.8rem〜6rem (中央は純vw) */
+    font-size: clamp(2.8rem, 6.5vw, 6rem);
+    margin: .1em 0 0;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-shadow: 3px 3px 8px rgba(0,0,0,.3);
+  }
+  
+  .nakanozemi-hero-sub {
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+    margin-top: .4em;
+    color: rgba(255,255,255,.9);
+    letter-spacing: .05em;
+  }
+  
+  .nakanozemi-scroll {
+    margin-top: 2em;
+    font-size: .9rem;
+    opacity: .8;
+    animation: scroll-blink 1.5s infinite alternate;
+  }
+  @keyframes scroll-blink {
+    from { opacity:.4; transform: translateY(0); }
+    to   { opacity:1;  transform: translateY(5px); }
+  }
+  
+  /* ---------- Sections ---------- */
+  .nakanozemi-section {
+    max-width: 1000px;
+    margin: 6rem auto;
+    padding: 0 1.5rem;
+  }
+  .nakanozemi-section--alt {
 
-.button:hover {
-    background-color: #c1c1c1;
-    box-shadow: 0 0 0;
-    transform: translate(5px, 5px);
-}
+    border-radius: var(--nz-radius);
+    padding: 4rem 2rem;
 
-
-.indexabout{
-    font-size: 40px;
-    width: 900px;
-    height: 300px;
-    background-color: white;
-    box-shadow: -50px 50px 0 #5C7BEC;
+  }
+  .nakanozemi-title {
+    /* 2.5rem〜4rem */
+    font-family: "Amatic SC",cursive;
+    font-size: clamp(2.5rem, 3.2vw, 4rem);
     text-align: center;
-        
-
-}
-
-.indexabout1{
-    font-size: 40px;
-    width: 900px;
-    height: 300px;
-    background-color: white;
-    box-shadow: 50px 50px 0 #008000;
-
-}
-
-.indexabout2{
-    font-size: 40px;
-    width: auto;
-    height: 300px;
-    background-color: white;
-    box-shadow: -50px 50px 0 #7A4980;
+    margin-bottom: 2rem;
+    color: var(--nz-brand);
+  }
+  
+  /* ---------- Cards ---------- */
+  .nakanozemi-card {
+    background:#fff;
+    border-radius: var(--nz-radius);
+    /* 1rem〜2rem */
+    padding: clamp(1rem, 2.4vw, 2rem);
+    box-shadow: 12px 12px 0 var(--nz-shadow-red);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .nakanozemi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 12px 20px 0 rgba(0,0,0,.1);
+  }
+  .nakanozemi-card--blue   { box-shadow: 12px 12px 0 var(--nz-shadow-blue); }
+  .nakanozemi-card--green  { box-shadow: 12px 12px 0 var(--nz-shadow-green); }
+  .nakanozemi-card--purple { box-shadow: 12px 12px 0 var(--nz-shadow-purple); }
+  
+  .nakanozemi-card-title {
+    /* 1.5rem〜2.2rem */
+    font-family: "Nico Moji","Kokoro",sans-serif;
+    font-size: clamp(1.5rem, 2.2vw, 2.2rem);
     text-align: center;
-    
-}
+    margin-bottom: 1rem;
+  }
+  .nakanozemi-card-text {
+    /* 1rem〜1.25rem */
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    line-height: 1.7;
+    text-align: center;
+    color:#333;
+  }
+  .nakanozemi-card-action {
+    display:flex;
+    justify-content:center;
+    margin-top:1.5rem;
+  }
+  
+  /* ---------- Button ---------- */
+  .nakanozemi-button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:.8rem 1.5rem;
+    border-radius:.8rem;
+    background: var(--nz-brand);
+    color:#fff;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:6px 6px 0 rgba(0,0,0,.2);
+    transition: all .2s ease;
+  }
+  .nakanozemi-button:hover {
+    background:#b3453f;
+    transform: translate(4px,4px);
+    box-shadow:none;
+  }
+  
+  /* ---------- Responsive ---------- */
+  @media (max-width: 768px){
+    .nakanozemi-section { margin: 4rem auto; }
+    .nakanozemi-hero { height: 90vh; }
+  }
+  

@@ -1,177 +1,114 @@
-<div class="bg_dtest">
-    <div class="dogtitle">
-     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
-        <h1>MEMBER</h1>
+<link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
 
+<div class="member-page">
+
+  <!-- HERO -->
+  <section class="member-hero">
+    <h1 class="member-hero__title">MEMBER</h1>
+    <p class="member-hero__sub">中野ゼミのメンバーと指導教員のご紹介</p>
+  </section>
+
+  <!-- ゼミ概要（数字でパッとわかる） -->
+  <section class="member-stats">
+    <div class="stat">
+      <div class="stat__label">ゼミ開設</div>
+      <div class="stat__value">2007年</div>
+    </div>
+    <div class="stat">
+      <div class="stat__label">活動日</div>
+      <div class="stat__value">2024年度秋：金曜3限〜</div>
+    </div>
+    <div class="stat">
+      <div class="stat__label">在籍</div>
+      <div class="stat__value">33名</div>
+      <div class="stat__note">4年9 / 3年12 / 2年12</div>
+    </div>
+    <div class="stat">
+      <div class="stat__label">男女比</div>
+      <div class="stat__value">6 : 4</div>
+    </div>
+  </section>
+
+  <!-- 指導教員 -->
+  <section class="faculty">
+    <h2 class="section-title">指導教員</h2>
+    <div class="section-underline"></div>
+
+    <article class="faculty-card">
+      <div class="faculty-card__photo">
+        <%= image_tag 'nakanot.png', class: 'faculty-photo', alt: '中野剛治 先生' %>
+      </div>
+      <div class="faculty-card__body">
+        <h3 class="faculty-name">中野 剛治 先生</h3>
+        <p class="faculty-name--yomi">なかの こうじ</p>
+        <ul class="faculty-meta">
+          <li>東洋大学</li>
+          <li>経営学部 第一部</li>
+          <li>経営学科 准教授</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3カラム：講義 / メッセージ / その他 -->
+    <div class="faculty-panels">
+      <section class="panel">
+        <h4 class="panel__head">講義科目</h4>
+        <ul class="panel__list">
+          <li>基礎演習入門</li>
+          <li>ソーシャルビジネス実習講義</li>
+          <li>ベンチャー企業論</li>
+          <li>起業支援論</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h4 class="panel__head">中野先生からのメッセージ</h4>
+        <div class="panel__box">
+          <p>当ゼミでは、ゼミ生が自分のやりたいことや考えたことを熱意を持って実現し、卒業後も「同じ目標に向かって取り組んだ仲間」として語り合えるような、熱い人間関係を残りの大学生活で作っていきましょう。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h4 class="panel__head">その他</h4>
+        <ul class="panel__list">
+          <li>血液型：O型</li>
+          <li>出身：福岡県</li>
+          <li>出身大学：東京大学大学院</li>
+          <li>似ている芸人：???</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- 好きな〇〇 -->
+  <section class="favorites">
+    <h2 class="section-title">好きな〇〇</h2>
+    <div class="section-underline"></div>
+    <div class="favorites__box">
+      <ul class="favorites__list">
+        <li><strong>好きな食べ物：</strong>魚料理</li>
+        <li><strong>好きな映画：</strong>シザーハンズ</li>
+        <li><strong>好きなお菓子：</strong>カントリーマアム</li>
+        <li><strong>一言：</strong>中野ゼミで「楽しい」経営学の学びを満喫してください！</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ゼミ生（ギャラリー） -->
+  <section class="students">
+    <h2 class="section-title">ゼミ生</h2>
+    <div class="section-underline"></div>
+
+    <div class="students__grid">
+      <%= image_tag 'zemisei1.jpg', class: 'student-photo', alt: 'ゼミ生写真1' %>
+      <%= image_tag 'zemisei2.jpg', class: 'student-photo', alt: 'ゼミ生写真2' %>
+      <%= image_tag 'zemisei3.jpg', class: 'student-photo', alt: 'ゼミ生写真3' %>
     </div>
 
-    <div class="dogonebox">
-        <div class="dogonebox1">
-        </div>
-        <div class="dogonebox2">
-            <div class="dogonebox20">
-            ゼミ開設：2007年
-            </div>
-            <div class="dogonebox21">
-            活動日：2024年度秋は金曜日３限〜
-            </div>
-            <div class="dogonebox22">
-            中野ゼミは3学年合同でゼミを行なっています.
-            </div>
-            <div class="dogonebox23">
-            ※ゼミ生人数：33人
-            </div>
-            <div class="dogonebox24">
-            ４年生(9人),    ３年生(12人),    2年生(12人)
-            </div>
-            <div class="dogonebox25">
-            男女比　6：４
-            </div>
-        </div>
+    <p class="students__cta-title">メンバー紹介</p>
+    <div class="students__cta">
+      <%= link_to "現役ゼミ生との交流", tweets_apple_path, class: "btn-primary" %>
     </div>
-  
+  </section>
 
-    <div class="dogtwobox">
-        <div class="dogtwobox1">
-        指導教員
-        </div>
-        <div class="dogtwobox2">
-        </div>
-    </div>
-    <div class="dogtwobox3">
-        <div class="dogen">
-            <%= image_tag 'nakanot.png', class:"dog-image"%>
-        </div>
-        <div class="dogtwobox4">
-            <div class="dogtwobox40">
-            中野剛治先生
-            </div>
-            <div class="dogtwobox40">
-            なかの　こうじ
-            </div>
-            <div class="dogtwobox41">
-            東洋大学
-            </div>
-            <div class="dogtwobox42">
-            経営学部第一部
-            </div>
-            <div class="dogtwobox43">
-            経営学科　准教授
-            </div>
-        </div>
-    </div>
-
-    <div class="dogtwobox5">
-        <div class="dogtwobox51">
-            <div class="dogtwobox51a">
-            講義科目
-            </div>
-            <div class="gdogtwobox51b">
-                <div class="dogtwobox51b1">
-                基礎演習入門
-                </div>
-                <div class="dogtwobox51b1">
-                ソーシャルビジネス実習講義
-                </div>
-                <div class="dogtwobox51b1">
-                ベンチャー企業論
-                </div>
-                <div class="dogtwobox51b1">
-                起業支援論
-                </div>
-            </div>
-        </div>
-        <div class="dogtwobox52">
-            <div class="dogtwobox52a">
-            中野先生からのメッセージ
-            </div>
-            <div class="gdogtwobox52b">
-                <div class="dogtwobox51b1">
-                当ゼミでは、ゼミ生が自分のやりたいことや考えたことを
-                </div>
-                <div class="dogtwobox51b1">
-                熱意を持って実現し、
-                </div>
-                <div class="dogtwobox51b1">
-                卒業後も「同じ目標に向かって取り組んだ仲間」として
-                </div>
-                <div class="dogtwobox51b1">
-                語り合えるような、
-                </div>
-                <div class="dogtwobox51b1">
-                熱い人間関係を残りの大学生活で作っていきましょう
-                </div>
-            </div>
-        </div>
-        <div class="dogtwobox53">
-            <div class="dogtwobox53a">
-            その他
-            </div>
-            <div class="gdogtwobox53b">
-                <div class="dogtwobox51b1">
-                血液型：O型
-                </div>
-                <div class="dogtwobox51b1">
-                出身：福岡県
-                </div>
-                <div class="dogtwobox51b1">
-                出身大学：東京大学大学院
-                </div>
-                <div class="dogtwobox51b1">
-                似ている芸人：???
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="dogtwobox6">
-        <div class="dogtwobox61">
-        好きな〇〇
-        </div>
-        <div class="dogtwobox62">
-            <div class="dogtwobox51b1">
-            好きな食べ物:魚料理
-            </div>
-            <div class="dogtwobox51b1">
-            好きな映画:シザーハンズ
-            </div>
-            <div class="dogtwobox51b1">
-            好きなお菓子:カントリーマアム
-            </div>
-            <div class="dogtwobox51b1">
-            一言：中野ゼミで「楽しい」経営学の学びを満喫してください！
-            </div>
-        </div>
-    </div>
-
-    <div class="dogthreebox">
-        <div class="dogthreebox1">
-        ゼミ生
-        </div>
-        <div class="dogthreebox2">
-            <div class="dogthreebox20">
-            </div>
-        </div>
-
-        <div class="dogthreebox2a">
-            <div class="dogthreebox4">
-            <%= image_tag 'zemisei1.jpg', class:"dog-zemiimage1"%>
-            </div>
-            <div class="dogthreebox40">
-            <%= image_tag 'zemisei2.jpg', class:"dog-zemiimage2"%>
-            </div>
-            <div class="dogthreebox41">
-            <%= image_tag 'zemisei3.jpg', class:"dog-zemiimage3"%>
-            </div>
-        </div>
-
-        <div class="dogthreebox3">
-        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
-        メンバー紹介
-        </div>
-        <div class="dogbutton">
-            <%= link_to "現役ゼミ生との交流", tweets_apple_path %>
-        </div>
-    </div>
 </div>
-

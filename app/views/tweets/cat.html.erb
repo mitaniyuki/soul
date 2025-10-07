@@ -1,128 +1,67 @@
-<div class="bg_ctest">
-    <div class="cattitle">  
-    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
-        <h1>ACTIVITY</h1>
+<div class="activity-page">
+  <!-- タイトル -->
+  <section class="activity-hero">
+    <h1>ACTIVITY</h1>
+    <p>中野ゼミの学びと実践の場をご紹介します。</p>
+  </section>
+
+  <!-- 活動概要 -->
+  <section class="activity-intro">
+    <h2>活動内容</h2>
+    <p>
+      中野ゼミでは、学問と実践を融合させた多様な活動が行われています。<br>
+      学びを通じて人間関係を深め、ビジネスパーソンとしてのスキルを実際の場面で磨きます。<br>
+      主に3つの活動を紹介します。
+    </p>
+    <ul>
+      <li>① 3分間スピーチ</li>
+      <li>② 輪読</li>
+      <li>③ チーム研究</li>
+    </ul>
+  </section>
+
+  <!-- 各活動 -->
+  <section class="activity-section reverse">
+    <div class="activity-img">
+      <%= image_tag 'nikkei.jpg', class:"activity-photo" %>
     </div>
-
-    <div class="catonebox">
-        <div class="catonebox1">
-        活動内容
-        </div>
-        <div class="catonebox2">
-        中野ゼミでは、学問と実践を融合させた多様な活動が行われています。
-        </div>
-        <div class="catonebox2">
-        ここでは、学びを通じて人間関係を深めるだけでなく、
-        </div>
-        <div class="catonebox20">
-        ビジネスパーソンとしてのスキルを実際の場面で磨くことができます。
-        </div>
-        <div class="catonebox2">
-        主に3つの活動を行っているので、その3つを紹介していきます！
-        </div>
-        <div class="catonebox2">
-        ①3分間スピーチ②輪読③チーム研究
-        </div>
+    <div class="activity-text">
+      <h3>① 3分間スピーチ</h3>
+      <p>経済誌『日経ビジネス』を題材に、自身の関心事について3分間スピーチを行います。論理的思考力とプレゼン力を養います。</p>
     </div>
+  </section>
 
-    <div class="cattwobox">
-        <div class="cattwoboxmini">
-            <div class="caten">
-            <%= image_tag 'nikkei.jpg', class:"cat-image"%>
-            </div>
-            <div class="cattwobox10">
-            ①3分間スピーチ
-            </div>
-            <div class="cattwobox1">
-            日経ビジネスという経済誌を使用して、
-            </div>
-            <div class="cattwobox1">
-            ゼミ生が自身の関心事について3分間でスピーチをします。
-            </div>
-            <div class="cattwobox1">
-            これにより、プレゼンテーションスキルを鍛え、
-            </div>
-            <div class="cattwobox1">
-            論理的思考力を向上させます。
-            </div>
-        </div>
+  <section class="activity-section">
+    <div class="activity-img">
+      <%= image_tag 'book.png', class:"activity-photo" %>
     </div>
-    <div class="cattwobox">
-        <div class="cattwoboxmini">
-            <div class="caten">
-            <%= image_tag 'book.png', class:"cat-image"%>
-            </div>
-            <div class="cattwobox10">
-            ②輪読
-            </div>
-            <div class="cattwobox1">
-            指定された専門書や論文を読み込み、
-            </div>
-            <div class="cattwobox1">
-            ゼミ生全員で深く深く議論します。
-            </div>
-            <div class="cattwobox1">
-            これにより、他者の意見を取り入れつつ、
-            </div>
-            <div class="cattwobox1">
-            自分の考えを発展させることができます。
-            </div>
-        </div>
+    <div class="activity-text">
+      <h3>② 輪読</h3>
+      <p>指定された専門書や論文をゼミ全体で読み込み、意見を交わしながら議論します。他者の視点を学び、自分の考えを深めます。</p>
     </div>
-    <div class="cattwobox">
-        <div class="cattwoboxmini">
-            <div class="caten">
-            <%= image_tag 'team2.png', class:"cat-image"%>
-            </div>
-            <div class="cattwobox10">
-            ③チーム研究
-            </div>
-            <div class="cattwobox1">
-            ゼミ生はチームに分かれて、
-            </div>
-            <div class="cattwobox1">
-            社会的課題に取り組む研究を行います。
-            </div>
-            <div class="cattwobox1">
-            自分たちで研究テーマを設定し、
-            </div>
-            <div class="cattwobox1">
-            企業訪問やインタビューを通じて
-            </div>
-            <div class="cattwobox1">
-            課題解決のためのソーシャルビジネスを実施します。
-            </div>
-            <div class="cattwobox1">
-            行った研究は経営学会やインナー大会で発表し、
-            </div>
-            <div class="cattwobox1">
-            そこで高い評価を得ることを目指します。
-            </div>
-        </div>   
+  </section>
+
+  <section class="activity-section reverse">
+    <div class="activity-img">
+      <%= image_tag 'team2.png', class:"activity-photo" %>
     </div>
+    <div class="activity-text">
+      <h3>③ チーム研究</h3>
+      <p>
+        ゼミ生がチームに分かれ、社会課題をテーマに研究を行います。企業訪問やインタビューを通じて課題解決のアイデアを練り、学会発表を目指します。
+      </p>
+    </div>
+  </section>
 
+  <!-- 年間表 -->
+  <section class="activity-schedule">
+    <h2>年間スケジュール</h2>
+    <%= image_tag 'plan3.png', class:"activity-schedule-img" %>
+  </section>
 
-
-    <div class="catsixbox">
-        <div class="catsixbox1">
-        アクティビティーの年間表
-        </div>
-        <div class="catsixbox2">
-        <%= image_tag 'plan3.png', class:"cattwo-image"%>
-        </div>
-    </div>  
-    <div class="catfivebox">
-        <div class="catfivebox1">
-        現役2年ゼミ生の1週間スケジュール
-        </div>
-        <div class="catfivebox2">
-        <%= image_tag 'plan1.jpg', class:"catone-image"%>
-        </div>
-    </div>    
-  
-
-
+  <!-- ゼミ生の1週間 -->
+  <section class="activity-week">
+    <h2>現役ゼミ生の1週間</h2>
+    <%= image_tag 'plan1.jpg', class:"activity-week-img" %>
+  </section>
 </div>
-
-
-  

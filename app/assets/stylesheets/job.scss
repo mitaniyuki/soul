@@ -1,257 +1,243 @@
-.bg_jtest {                
-    padding:  5px;                             
-    background-color: #FFF8E1;   
+/* =============================
+   ABOUT US page (nz-about-*)
+   ============================= */
+:root{
+  --nz-bg: #fef8e6;        /* やや濃いベージュで白文字と区別 */
+  --nz-ink: #111;          /* 本文・見出し共通の濃い文字色 */
+  --nz-brand: #9C312D;
+  --nz-card: #fff;
+  --nz-radius: 16px;
+  --nz-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* 全体背景と文字色 */
+.nz-about-page{
+  background: var(--nz-bg);
+  color: var(--nz-ink);
+  padding: 0 1.2rem 4rem;
+  line-height: 1.9;
+  font-size: clamp(1rem, 2.2vw, 1.06rem);
+}
+
+/* ---------- HERO（暗め背景＋白文字） ---------- */
+/* タイトルセクション */
+.nz-about-hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(120deg, var(--act-accent), #4b5fa5);
+  color: #fff;
+  /* ↓↓ 追加したスタイル ↓↓ */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box; /* paddingを含めて幅を計算するために推奨 */
+}
+
+/* h1とpのスタイルは変更なし */
+.nz-about-hero h1 {
+  font-family: "Hannari", serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.nz-about-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.9;
+}
+
+/* ---------- セクション見出し ---------- */
+.nz-about-h2{
+  text-align:left;
+  margin:0 auto .8rem;
+  max-width:clamp(0px,92vw,1100px);
+  color:var(--nz-brand);
+  font-family:"Amatic SC",cursive;
+  letter-spacing:.06em;
+  font-size:clamp(1.8rem,4vw,3rem);
+}
+
+/* ---------- 本文カード：濃文字指定 ---------- */
+.nz-about-card{
+  background:var(--nz-card);
+  border-radius:var(--nz-radius);
+  box-shadow:var(--nz-shadow);
+  padding:1.4rem 1.2rem;
+  margin:0 auto 2.2rem;
+  max-width:clamp(0px,92vw,1000px);
+  color:var(--nz-ink);
+}
+.nz-about-card p{
+  margin:.4rem 0;
+  color:var(--nz-ink);
+}
+.nz-about-quote{
+  margin:1rem 0;
+  padding:.8rem 1rem;
+  border-left:6px solid var(--nz-brand);
+  background:#fff3f1;
+  font-weight:700;
+  color:var(--nz-ink);
+}
+
+/* ---------- 特徴 ---------- */
+.nz-about-features{
+  margin:2.8rem auto;
+  max-width:clamp(0px,92vw,1100px);
+  color:var(--nz-ink);
+}
+.nz-about-section-head{margin-bottom:.6rem;}
+.nz-about-feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
+.nz-about-feature{
+  background:var(--nz-card);
+  border-radius:var(--nz-radius);
+  text-align:center;
+  padding:1rem .8rem .9rem;
+  box-shadow:var(--nz-shadow);
+  color:var(--nz-ink);
+}
+.nz-about-img{
+  width:220px;height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:0 auto .6rem;
+  display:block;
+}
+.nz-about-caption{
+  font-weight:700;
+  font-size:clamp(1rem,2.4vw,1.1rem);
+  color:var(--nz-ink);
+}
+
+/* ---------- 特徴の説明 ---------- */
+.nz-about-columns{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  margin-top:1rem;
+  color:var(--nz-ink);
+}
+.nz-about-col{
+  background:var(--nz-card);
+  border-radius:var(--nz-radius);
+  box-shadow:var(--nz-shadow);
+  padding:1rem .9rem;
+  text-align:left;
+  color:var(--nz-ink);
+}
+.nz-about-col h3{
+  margin:0 0 .3rem;
+  color:var(--nz-brand);
+  font-size:clamp(1.05rem,2.6vw,1.22rem);
+}
+.nz-about-col p{margin:.2rem 0;color:var(--nz-ink);}
+
+/* ---------- 行動規範 ---------- */
+.nz-about-policy{
+  margin:2.6rem auto 0;
+  max-width:clamp(0px,92vw,1100px);
+  color:var(--nz-ink);
+}
+.nz-about-policy-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.nz-about-policy-item{
+  background:var(--nz-card);
+  border-radius:var(--nz-radius);
+  box-shadow:var(--nz-shadow);
+  padding:1.2rem 1rem;
+  color:var(--nz-ink);
+}
+.nz-about-policy-item h3{
+  margin:0 0 .3rem;
+  color:var(--nz-brand);
+  font-size:clamp(1.05rem,2.6vw,1.22rem);
+}
+.nz-about-policy-item p{margin:.2rem 0;color:var(--nz-ink);}
+
+/* ============================
+   ABOUT US: Contrast Fix Patch
+   ============================ */
+
+/* 1) カード本体は必ず白背景＋薄い枠に */
+.nz-about-card,
+.nz-about-feature,
+.nz-about-col,
+.nz-about-policy-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06) !important;
+}
+
+/* 2) カード内の全テキストを濃色で強制（継承打ち消し） */
+.nz-about-card,
+.nz-about-card * {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* 3) 特徴カード／説明カラム／行動規範も同様に濃色テキストで固定 */
+.nz-about-feature, .nz-about-feature * ,
+.nz-about-col,     .nz-about-col * ,
+.nz-about-policy-item, .nz-about-policy-item * {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+/* 4) 強調やリンクの視認性も底上げ */
+.nz-about-card strong, .nz-about-card b,
+.nz-about-col strong, .nz-about-col b,
+.nz-about-policy-item strong, .nz-about-policy-item b {
+  color: #000 !important;
+}
+
+.nz-about-card a,
+.nz-about-feature a,
+.nz-about-col a,
+.nz-about-policy-item a {
+  color: #9C312D !important;      /* ブランド色 */
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+/* 5) 引用ブロックは淡い背景＋濃い文字に固定 */
+.nz-about-quote {
+  background: #fff7f5 !important;
+  border-left: 6px solid #9C312D !important;
+  color: #111 !important;
+}
+
+/* 6) セクション見出しも親の白継承を無効化 */
+.nz-about-h2 {
+  color: #9C312D !important;
+  text-shadow: none !important;
+}
+
+/* 7) 画像キャプションも濃色で */
+.nz-about-caption {
+  color: #111 !important;
+}
+
+/* 8) ヒーローは白文字のままでOK（本文と干渉させない） */
+.nz-about-hero .nz-about-hero-title,
+.nz-about-hero .nz-about-hero-sub {
+  color: #fff !important;
 }
 
 
-.jobtitle {
-    height: 200px;                  
-    font-size: 30px;                           
-    animation-name:fadeLeftAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-    margin-left: 10%;
-    font-family: "Hannari";
+/* ---------- レスポンシブ ---------- */
+@media(max-width:980px){
+  .nz-about-feature-grid{grid-template-columns:1fr 1fr;}
+  .nz-about-columns{grid-template-columns:1fr;}
 }
-            
-    @keyframes fadeLeftAnime{
-        from {
-        opacity: 0;
-        transform: translateX(-100px);
-        }
-            
-        to {
-        opacity: 1;
-        transform: translateX(0);
-        }
-    }
-
-
-.onebox{
-    height: 800px;
-    background-color: white;
-
-    .onebox1{
-        width: 500px;
-        height: 90px;
-        font-size: 40px;
-        color: black;
-        margin-left: 10%;
-    }
-    .onebox2{
-        color: black;
-        height: 10px;
-        font-size: 20px;
-        padding: 50px; 
-        text-align: center;
-    }
-    .onebox20{
-        color: black;
-        height: 10px;
-        font-size: 30px;
-        padding: 50px; 
-        text-align: center;
-    }
-    .onebox21{
-        color: red;
-        height: 10px;
-        font-size: 30px;
-        padding: 50px; 
-        text-align: center;
-    }
-    
-}
-
-.twoboxbigjob{
-    background-color: white;
-    height: 1200px;
-}
-
-.twobox{
-    width: 900px;
-    height: 100px;
-    margin-top: 20%;
-    margin-left: 10%;
-    display: flex;
-    justify-content: space-evenly;
-
-    .twobox1{
-        width: 250px;
-        height: 100px;
-        color: black;
-        margin-top: 2%;
-        font-size: 40px;
-    }
-    .twobox2{
-        width: 800px;
-        height: 100px;
-        color: red;
-        font-size: 70px;
-    }
-    
-}
-
-
-.bigenbox {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5%;
-}
-
-.enbox {
-	width: 300px;
-	height: 300px;
-	border-radius: 50%;
-    display: flex;
-
-    .job-image{
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-    }
-    .job1-image{
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-    }
-    .job2-image{
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-    }
-}
-
-.minibox{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5%;
-}
-
-.minibox1{
-    font-size: 30px;
-    color: black;
-    width: 300px;
-    display: flex;
-    text-align: center;
-    margin-left: 3%;
-}
-.minibox2{
-    font-size: 25px;
-    width: 300px;
-    color: black;
-    display: flex;
-}
-.minibox3{
-    font-size: 25px;
-    width: 300px;
-    color: black;
-    display: flex;
-}
-
-
-
-
-.threebox{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.threebox10{
-    margin-top: 5%;
-    font-size: 16px;
-    width: 380px;
-    color: black;
-    display: flex;
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
-
-    flex-direction: column;
-    text-align: center;
-    .threebox1{
-        border: 1px solid white;
-        height: 50px;
-    }
-}
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-.threebox11{
-    margin-top: 5%;
-    margin-left: 20px;
-    font-size: 16px;
-    width: 380px;
-    color: black;
-    display: flex;
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
-
-    flex-direction: column;
-    text-align: center;
-    .threebox1{
-        border: 1px solid white;
-        height: 50px;
-    }
-}
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-
-
-
-
-
-
-.fourbox{
-    height: 1000px;
-    background-color: white;
-    margin-top: 10%;
-
-    .fourbox1{
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .fourbox2{
-        width: 100px;
-        height: 5px;
-        background-color: #AD3939;
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-    .fourbox3{
-        color: black;
-        font-size: 20px;
-        text-align: center;
-        height: 80px;
-
-    }
-}
-
-.fourbox30{
-    color: red;
-    font-size: 30px;
-    text-align: center;
-    height: 80px;
-
+@media(max-width:640px){
+  .nz-about-feature-grid{grid-template-columns:1fr;}
+  .nz-about-policy-list{grid-template-columns:1fr;}
+  .nz-about-hero{height:34vh;}
 }

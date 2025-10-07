@@ -65,3 +65,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_08_124153) do
   add_foreign_key "likes", "tweets"
   add_foreign_key "likes", "users"
 end
+
+
+<%= form_for @tweet do |f| %>
+  <%= f.label :時間 %>
+  <%= f.text_field :time, :size => 140 %> 
+  <%= f.label :教科 %>
+  <%= f.text_field :subject, :size => 140 %> 
+  <%= f.label :日にち %>
+  <%= f.text_field :date, :size => 140 %> 
+  <%= f.label :テキスト %>
+  <%= f.text_field :materials, :size => 140 %> 
+  <%= f.submit "編集する" %>
+<% end %>

@@ -14,90 +14,126 @@
  *= require_self
  */
 
- @import 'font-awesome-sprockets';
-@import 'font-awesome';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-
-
- * {
-    padding: 0;
-    margin: 0;
-  }
-  body {
-    font-family: "Irish Grover", "Irish Grover", "Irish Grover",
-    Kaisei Decol, "Kaisei Decol", Kaisei Decol;
-  }
-  header {
-    background-color: #233B6C;
-    height: 80px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  header a {
-    color: white; 
-    text-decoration: none; 
-  }
-  header h1 {
-    color: white;
-    margin-left: 20px;
-  }
-  .header-list {
-    display: flex;
-    align-items: center;
-
-}
-header ul {
-  display: flex;
-}
-header li {
-  list-style: none;
-  margin-right: 40px;
+/* ================================
+   Header (nz- prefixed)
+   ================================ */
+:root{
+  --nz-head-bg: #233B6C;
+  --nz-head-bg-grad: linear-gradient(90deg,#233B6C 0%, #2e4b8d 60%, #33539b 100%);
+  --nz-ink: #fff;
+  --nz-accent: #FFEEB9; /* 下線色 */
 }
 
-.header1-image {
-  width: 75px;
-  height: 75px;
-  margin-right: 300px;
+/* ===== Reset: ページ周囲の白い枠対策 ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #FFF8E1; /* サイトの背景色に合わせる（必要なら変更） */
 }
+* { box-sizing: border-box; }
+img, video { display: block; max-width: 100%; }
 
-.header2-image {
-  width: 75px;
-  height: 75px;
-  margin-left: 300px;
-}
+/* main 要素のデフォルト余白を明示的にゼロ */
+main { margin: 0; padding: 0; }
 
-
-
-
-
-footer {
-  height: 80px;
-  background-color: #233B6C;
-  height: 60px;
-  bottom: 0;
+/* ページ専用ラッパーが必ず全幅・全高をカバー */
+.nakanozemi-page {
+  min-height: 100%;
   width: 100%;
-  display: flex;
+  background: #FFF8E1; /* ここも念のため指定 */
+  padding: 0; /* もし周囲に余白が見える場合は 0 に */
+}
+
+
+.nz-header{
+  position: sticky; top: 0; z-index: 50;
+  background: var(--nz-head-bg-grad);
+  color: var(--nz-ink);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  backdrop-filter: blur(4px);
+}
+.nz-header-inner{
+  max-width: clamp(0px, 92vw, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  position: fixed;
-  justify-content: center; /* アイテムを中央に配置 */
-  gap: 20px; /* アイコン間のスペースを設定 */
-  padding: 10px;
-
-}
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
-@import "@fortawesome/fontawesome-free/scss/fontawesome";
-
-
-
-.fa-instagram{
-  color: #FF0085
-}
-.fa-book{
-  color: white
+  gap: 1rem;
+  padding: .8rem 1rem;
 }
 
+/* Brand */
+.nz-brand{
+  text-decoration: none; color: var(--nz-ink);
+  display: inline-flex; align-items: baseline; gap: .5ch;
+}
+.nz-brand-ja{
+  font-weight: 800;
+  letter-spacing: .03em;
+  font-size: clamp(1.2rem, 3.8vw, 1.7rem);
+}
+.nz-brand-en{
+  opacity: .8;
+  font-size: clamp(.8rem, 2.4vw, 1rem);
+}
+
+/* Nav */
+.nz-nav{ justify-self: end; }
+.nz-nav-list{
+  display: flex; gap: clamp(.6rem, 3vw, 2rem);
+  list-style: none; margin: 0; padding: 0;
+}
+.nz-nav-list a{
+  color: var(--nz-ink); text-decoration: none; font-weight: 700;
+  font-size: clamp(.9rem, 2.6vw, 1rem);
+  position: relative; padding: .25rem .1rem;
+}
+.nz-nav-list a::after{
+  content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px;
+  background: var(--nz-accent); transform: scaleX(0); transform-origin:left;
+  transition: transform .18s ease;
+}
+.nz-nav-list a:hover::after{ transform: scaleX(1); }
+
+/* Burger (mobile) – CSS only */
+.nz-nav-toggle{ display:none; }
+.nz-burger{
+  display:none; cursor:pointer; width:34px; height:28px;
+  align-items:center; justify-content:center; gap:5px;
+}
+.nz-burger span{
+  display:block; width:100%; height:3px; background:#fff; border-radius:2px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Drawer for mobile */
+@media (max-width: 860px){
+  .nz-header-inner{ grid-template-columns: auto auto; }
+  .nz-burger{ display:flex; justify-self:end; }
+  .nz-nav{
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  .nz-nav-list{
+    flex-direction: column; gap: .6rem;
+    padding: .8rem 0; display: none;
+    border-top: 1px solid rgba(255,255,255,.15);
+  }
+  .nz-nav-toggle:checked ~ .nz-burger span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+  .nz-nav-toggle:checked ~ .nz-burger span:nth-child(2){ opacity: 0; }
+  .nz-nav-toggle:checked ~ .nz-burger span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+  .nz-nav-toggle:checked ~ .nz-nav .nz-nav-list{ display:flex; }
+}
+
+/* ================================
+   Footer (合わせて整える)
+   ================================ */
+.nz-footer{
+  background:#233B6C; color:#fff;
+  display:flex; justify-content:center; align-items:center;
+  gap: 20px; padding: 14px 12px; margin-top: 4rem;
+}
+.nz-footer a{ color:#fff; }
+.fa-instagram{ color:#FF0085; }
+.fa-book{ color:#fff; }

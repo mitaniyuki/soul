@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "3.0.7"
+ruby "3.2.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3", ">= 7.1.3.4"
+gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -65,13 +65,14 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'sqlite3' # 追加
+  gem 'dotenv-rails' # 追加
 end
 gem 'devise'
 gem 'sassc'
+gem 'font-awesome-sass'
 
-
+# PostgreSQL → 本番用
 group :production do
   gem 'pg'
 end
-
-gem 'font-awesome-sass'

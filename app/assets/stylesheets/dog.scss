@@ -1,352 +1,227 @@
-.bg_dtest {
-    height: 2900px;                  
-    padding:  5px;                             
-    background-color: #FFF8E1;   
+/* ============================
+   MEMBER – Faculty focused
+   ============================ */
+:root{
+  --m-bg: #fdf6e5;
+  --m-card: #ffffff;
+  --m-ink: #1a1a1a;
+  --m-ink-muted: #5a5a5a;
+  --m-brand: #9C312D;
+  --m-accent: #233B6C;
+  --m-soft: #EEF2FF;
+  --m-radius: 18px;
+  --m-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
-
-.dogtitle {
-    height: 100px;                  
-    width: 200px;  
-    font-size: 30px;                           
-    animation-name:fadeLeftAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-    margin-left: 10%;
-    font-family: "Hannari";
-}
-        
-@keyframes fadeLeftAnime{
-    from {
-    opacity: 0;
-    transform: translateX(-100px);
-    }
-        
-    to {
-    opacity: 1;
-    transform: translateX(0);
-    }
+.member-page{
+  background: var(--m-bg);
+  color: var(--m-ink);
+  line-height: 1.9;
+  font-size: clamp(1rem, 2.2vw, 1.08rem);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 4rem;
 }
 
-.dogonebox{
-    height: 300px;
-    margin-top: 5%;
-
-    .dogonebox1{
-        width: 500px;
-        color: black;
-        font-size: 50px;
-        margin-left: 45%;
-    }
-    .dogonebox2{
-        height: 350px;
-        color: black;
-        background-color: white;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-    .dogonebox20{
-        height: 50px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .dogonebox21{
-        height: 50px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .dogonebox22{
-        height: 50px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-        margin-top: 2%;
-    }
-    .dogonebox23{
-        height: 50px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .dogonebox24{
-        height: 50px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .dogonebox25{
-        height: 50px;
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-
+/* ---------- HERO ---------- */
+.member-hero{
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  background: linear-gradient(120deg, var(--act-accent), #4b5fa5);
+  color: #fff;
+}
+.member-hero__title{
+  font-family: "Hannari", serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.member-hero__sub{
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.9;
 }
 
-
-
-
-
-
-.dogtwobox{
-    width: 1000px;
-    background-color: #E3E7FF; 
-    margin-top: 10%;
-    margin-left: 20%;
-    .dogtwobox1{
-        color: black;
-        font-size: 40px;
-        margin-left: 40%;
-    }
-    .dogtwobox2{
-        height: 5px;
-        background-color: #AD3939;
-        width: 1000px;
-    }
+/* ---------- STATS ---------- */
+.member-stats{
+  max-width: 1100px;
+  margin: 2.2rem auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  padding: 0 1rem;
 }
-.dogtwobox3{
-    background-color: white; 
-    display: flex;
-    width: 1000px;
-    height: auto;
-    margin-left: 20%;
+.stat{
+  background: var(--m-card);
+  border-radius: var(--m-radius);
+  box-shadow: var(--m-shadow);
+  text-align:center;
+  padding: 1rem .8rem;
 }
-.dogen{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: black; 
-    margin-left: 50px;
-    margin-top: 3cqmin;
-
+.stat__label{
+  color: var(--m-ink-muted);
+  font-size: .95rem;
 }
-.dog-image{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+.stat__value{
+  color: var(--m-ink);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
 }
-.dogtwobox4{
-    width: 700px;
-    height: auto;
-    color: black;
-    text-align: center;
-    padding: 10%;
-    .dogtwobox40{
-        color: black;
-        font-size: 60px;
-        text-align: center;
-    }
-    .dogtwobox41{
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .dogtwobox42{
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
-    .dogtwobox43{
-        color: black;
-        font-size: 30px;
-        text-align: center;
-    }
+.stat__note{
+  color: var(--m-ink-muted);
+  font-size: .9rem;
+  margin-top: .2rem;
 }
 
-
-
-
-.dogtwobox5{
-    color: black;
-    display: flex;
-    margin-top: 50px;
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
+/* ---------- SECTION HEAD ---------- */
+.section-title{
+  text-align:center;
+  color: var(--m-brand);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .06em;
 }
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+.section-underline{
+  width: 90px; height: 4px;
+  background: var(--m-brand);
+  border-radius: 3px;
+  margin: .6rem auto 1.2rem;
 }
 
-    .dogtwobox51{
-        margin-left: 35px;
-        text-align: center;
-        .dogtwobox51a{
-            color: black;
-            font-size: 30px;
-            background-color: #E3E7FF;
-        }
-        .dogtwobox51b{
-            color: black;
-            font-size: 30px;
-            width: 400px;
-            height: 300px;
-            background-color: white;
-        }
-    }
-    .dogtwobox52{
-        margin-left: 100px;
-        text-align: center;
-        .dogtwobox52a{
-            color: black;
-            font-size: 30px;
-            background-color: #E3E7FF;
-        }
-        .dogtwobox52b{
-            color: black;
-            font-size: 30px;
-            width: 600px;
-            height: 500px;
-            background-color: white;
-        }
-    }
-    .dogtwobox53{
-        margin-left: 100px;
-        text-align: center;
-        .dogtwobox53a{
-            color: black;
-            font-size: 30px;
-            background-color: #E3E7FF;
-        }
-        .dogtwobox53b{
-            color: black;
-            font-size: 30px;
-            width: 50px;
-            height: 100px;
-            width: 400px;
-            height: 300px;
-            background-color: white;
-        }
-    }
-
-.dogtwobox51b1{
-    color: black;
-    font-size: 20px;
-    height: 70px;
-    padding: 5px;
+/* ---------- FACULTY CARD ---------- */
+.faculty{
+  max-width: 1100px;
+  margin: 2.8rem auto 0;
+  padding: 0 1rem;
+}
+.faculty-card{
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+  gap: 1.4rem;
+  background: var(--m-card);
+  border-radius: var(--m-radius);
+  box-shadow: var(--m-shadow);
+  padding: 1.4rem 1rem;
+}
+.faculty-card__photo{
+  flex: 0 0 auto;
+}
+.faculty-photo{
+  width: 260px; height: 260px; border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+.faculty-card__body{
+  flex: 1 1 420px;
+  min-width: 280px;
+  text-align: left;
+}
+.faculty-name{
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--m-brand);
+  font-weight: 800;
+}
+.faculty-name--yomi{
+  margin: .15rem 0 .5rem;
+  color: var(--m-ink-muted);
+}
+.faculty-meta{
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid; gap: .2rem;
+  font-size: clamp(1rem, 2.4vw, 1.1rem);
 }
 
-
-
-
-
-.dogtwobox6{
-    text-align: center;
-    margin-top: 100px;
-    margin-left: 150px;
-    .dogtwobox61{
-        color: black;
-        font-size: 30px;
-        background-color: #E3E7FF;
-        width: 1400px;
-    }
-    .dogtwobox62{
-        color: black;
-        font-size: 30px;
-        width: 1400px;
-        height: auto;
-        background-color: white;
-    }
+/* ---------- PANELS (3 columns) ---------- */
+.faculty-panels{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.panel{
+  background: var(--m-card);
+  border-radius: var(--m-radius);
+  box-shadow: var(--m-shadow);
+  padding: 1rem .9rem;
+  color: var(--m-ink);
+}
+.panel__head{
+  background: var(--m-soft);
+  color: var(--m-ink);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: .5rem .6rem;
+  border-radius: 10px;
+  margin: 0 0 .6rem;
+}
+.panel__list{
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: .35rem;
+}
+.panel__box p{
+  margin: .35rem 0;
 }
 
-.dogthreebox{
-    margin-top: 10px;
-    height: auto; 
-    animation: scroll-anim linear;
-    animation-timeline: view();
-    animation-range: entry 0% contain 70%;
+/* ---------- FAVORITES ---------- */
+.favorites{
+  max-width: 1100px; margin: 2.8rem auto 0; padding: 0 1rem;
 }
-@keyframes scroll-anim {
-    from {
-        opacity: 0;
-        scale: 0;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+.favorites__box{
+  background: var(--m-card);
+  border-radius: var(--m-radius);
+  box-shadow: var(--m-shadow);
+  padding: 1rem 1rem;
 }
-
-
-    .dogthreebox1{
-        font-size: 30px;
-        text-align: center;
-        color: black;
-    }
-    .dogthreebox2{
-        margin: 5px;
-    } 
-    .dogthreebox20{
-        width: 100px;
-        height: 5px;
-        background-color: #AD3939;
-        margin: 0 auto;
-    } 
-     .dogthreebox3{
-        font-size: 20px;
-        color: black;
-        text-align: center;
-        font-family: "Nico Moji";
-    }    
-    .dogbutton{
-        background: #eee;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 220px;
-        padding: 10px 25px;
-        color: #313131;
-        transition: 0.3s ease-in-out;
-        font-weight: 600;
-        box-shadow: 5px 5px 0 #000000;
-        text-decoration: none;
-    }
-
-.dogbutton:hover {
-    background-color: #c1c1c1;
-    box-shadow: 0 0 0;
-    transform: translate(5px, 5px);
+.favorites__list{
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: .35rem;
 }
+.favorites__list strong{ color: #000; }
 
+/* ---------- STUDENTS ---------- */
+.students{
+  max-width: 1100px; margin: 2.8rem auto 0; padding: 0 1rem;
+  text-align: center;
+}
+.students__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 1rem;
+  margin: .8rem 0 1.2rem;
+}
+.student-photo{
+  width: 100%; height: 360px;
+  border-radius: var(--m-radius);
+  object-fit: cover;
+  box-shadow: var(--m-shadow);
+  transition: transform .25s ease;
+}
+.student-photo:hover{ transform: scale(1.03); }
+.students__cta-title{
+  font-family: "Nico Moji","Noto Sans JP",sans-serif;
+  color: var(--m-ink); margin: 0 0 .6rem;
+}
+.btn-primary{
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--m-brand); color: #fff;
+  padding: .8rem 1.6rem; border-radius: 10px;
+  font-weight: 700; text-decoration: none;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.3);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-primary:hover{ background:#7a1e1b; transform: translate(3px,3px); box-shadow: none; }
 
-.dogthreebox2a{
-    display: flex;
-    margin-left: 200px;
-} 
-.dogthreebox4{
-    height: 400px;
-    width: 400px;
-} 
-.dog-zemiimage1{
-    height: 400px;
-    width: 400px;
+/* ---------- Responsive ---------- */
+@media (max-width: 960px){
+  .member-stats{ grid-template-columns: repeat(2,1fr); }
+  .faculty-card{ text-align: center; }
+  .faculty-card__body{ text-align: center; }
 }
-.dogthreebox40{
-    height: 400px;
-    width: 400px;
-} 
-.dog-zemiimage2{
-    height: 400px;
-    width: 400px;
-}
-.dogthreebox41{
-    height: 400px;
-    width: 400px;
-} 
-.dog-zemiimage3{
-    height: 400px;
-    width: 400px;
+@media (max-width: 640px){
+  .member-stats{ grid-template-columns: 1fr; }
+  .faculty-panels{ grid-template-columns: 1fr; }
+  .student-photo{ height: 300px; }
 }
