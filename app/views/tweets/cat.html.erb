@@ -1,11 +1,11 @@
 <div class="activity-page">
-  <!-- タイトル -->
+  <!-- HERO -->
   <section class="activity-hero">
     <h1>ACTIVITY</h1>
     <p>中野ゼミの学びと実践の場をご紹介します。</p>
   </section>
 
-  <!-- 活動概要 -->
+  <!-- 導入 -->
   <section class="activity-intro">
     <h2>活動内容</h2>
     <p>
@@ -13,55 +13,75 @@
       学びを通じて人間関係を深め、ビジネスパーソンとしてのスキルを実際の場面で磨きます。<br>
       主に3つの活動を紹介します。
     </p>
-    <ul>
+    <ul class="activity-tags">
       <li>① 3分間スピーチ</li>
       <li>② 輪読</li>
       <li>③ チーム研究</li>
     </ul>
   </section>
 
-  <!-- 各活動 -->
-  <section class="activity-section reverse">
+  <!-- 活動カード 1 -->
+  <section class="activity-card">
     <div class="activity-img">
-      <%= image_tag 'nikkei.jpg', class:"activity-photo" %>
+      <%= image_tag 'nikkei.jpg', class:"activity-photo", alt:"3分間スピーチの様子" %>
     </div>
     <div class="activity-text">
-      <h3>① 3分間スピーチ</h3>
+      <span class="activity-num">01</span>
+      <h3>3分間スピーチ</h3>
       <p>経済誌『日経ビジネス』を題材に、自身の関心事について3分間スピーチを行います。論理的思考力とプレゼン力を養います。</p>
     </div>
   </section>
 
-  <section class="activity-section">
+  <!-- 活動カード 2（左右反転） -->
+  <section class="activity-card activity-card--alt">
     <div class="activity-img">
-      <%= image_tag 'book.png', class:"activity-photo" %>
+      <%= image_tag 'book.png', class:"activity-photo", alt:"輪読のイメージ" %>
     </div>
     <div class="activity-text">
-      <h3>② 輪読</h3>
+      <span class="activity-num">02</span>
+      <h3>輪読</h3>
       <p>指定された専門書や論文をゼミ全体で読み込み、意見を交わしながら議論します。他者の視点を学び、自分の考えを深めます。</p>
     </div>
   </section>
 
-  <section class="activity-section reverse">
+  <!-- 活動カード 3 -->
+  <section class="activity-card">
     <div class="activity-img">
-      <%= image_tag 'team2.png', class:"activity-photo" %>
+      <%= image_tag 'team2.png', class:"activity-photo", alt:"チーム研究のイメージ" %>
     </div>
     <div class="activity-text">
-      <h3>③ チーム研究</h3>
-      <p>
-        ゼミ生がチームに分かれ、社会課題をテーマに研究を行います。企業訪問やインタビューを通じて課題解決のアイデアを練り、学会発表を目指します。
-      </p>
+      <span class="activity-num">03</span>
+      <h3>チーム研究</h3>
+      <p>ゼミ生がチームに分かれ、社会課題をテーマに研究を行います。企業訪問やインタビューを通じて課題解決のアイデアを練り、学会発表を目指します。</p>
     </div>
   </section>
 
   <!-- 年間表 -->
+  <!-- 年間スケジュール -->
   <section class="activity-schedule">
-    <h2>年間スケジュール</h2>
-    <%= image_tag 'plan3.png', class:"activity-schedule-img" %>
+    <div class="activity-section-inner">
+      <h2>年間スケジュール</h2>
+      <p class="activity-subtext">
+        年間を通して、学習・発表・フィールドワークをバランスよく配置しています。
+      </p>
+      <div class="activity-schedule-frame">
+        <%= image_tag 'plan3.png', class:"activity-schedule-img", alt:"年間スケジュール表" %>
+      </div>
+    </div>
   </section>
-
-  <!-- ゼミ生の1週間 -->
+  
+  <!-- 現役ゼミ生の1週間 -->
   <section class="activity-week">
-    <h2>現役ゼミ生の1週間</h2>
-    <%= image_tag 'plan1.jpg', class:"activity-week-img" %>
-  </section>
+    <div class="activity-section-inner">
+      <h2>現役ゼミ生の1週間</h2>
+      <p class="activity-subtext">
+        授業や研究、アルバイト、プライベートを両立するゼミ生のスケジュールを紹介します。
+      </p>
+      <div class="activity-week-frame">
+        <%= image_tag 'plan1.jpg', class:"activity-week-img", alt:"現役ゼミ生の1週間スケジュール" %>
+      </div>
+    </div>
+  </section>  
 </div>
+
+

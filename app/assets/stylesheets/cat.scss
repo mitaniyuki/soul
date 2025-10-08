@@ -1,48 +1,53 @@
 /* ============================
-   ACTIVITY PAGE
+   ACTIVITY PAGE – refreshed
    ============================ */
 :root {
   --act-bg: #fef8ee;
   --act-ink: #1a1a1a;
-  --act-brand: #9C312D;
-  --act-accent: #233B6C;
+  --act-muted: #5f5f5f;
+  --act-brand: #9C312D;   /* 赤 */
+  --act-accent: #233B6C;  /* ネイビー */
   --act-card: #ffffff;
+  --act-soft: #fff4f3;
   --act-radius: 16px;
-  --act-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --act-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
 /* 全体 */
 .activity-page {
   background: var(--act-bg);
   color: var(--act-ink);
-  font-family: "Noto Sans JP", sans-serif;
-  line-height: 1.8;
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.85;
   padding-bottom: 4rem;
+  font-size: clamp(1rem, 2.2vw, 1.08rem);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* タイトルセクション */
+/* HERO */
 .activity-hero {
   text-align: center;
-  padding: 5rem 1rem 3rem;
+  padding: 4.8rem 1rem 3rem;
   background: linear-gradient(120deg, var(--act-accent), #4b5fa5);
   color: #fff;
 }
 .activity-hero h1 {
   font-family: "Hannari", serif;
   font-size: clamp(2.2rem, 6vw, 3.6rem);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.1em;
+  margin: 0 0 .5rem;
+  letter-spacing: .1em;
 }
 .activity-hero p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  opacity: 0.9;
+  opacity: .95;
+  margin: 0;
 }
 
-/* 導入部 */
+/* 導入 */
 .activity-intro {
   background: var(--act-card);
-  max-width: 900px;
-  margin: 3rem auto;
+  max-width: 980px;
+  margin: 2.6rem auto 2.2rem;
   border-radius: var(--act-radius);
   box-shadow: var(--act-shadow);
   padding: 2rem 1.5rem;
@@ -51,115 +56,306 @@
 .activity-intro h2 {
   color: var(--act-brand);
   font-size: clamp(1.8rem, 4vw, 2.4rem);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
-.activity-intro p {
-  font-size: clamp(1rem, 2.2vw, 1.1rem);
-  margin-bottom: 1rem;
-}
-.activity-intro ul {
+.activity-intro p { margin: 0 0 1rem; }
+.activity-tags{
   list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; flex-wrap: wrap; gap: .8rem 1rem;
   justify-content: center;
-  gap: 1rem;
+  padding: 0; margin: .4rem 0 0;
 }
-.activity-intro li {
-  background: #fff4f3;
+.activity-tags li{
+  background: var(--act-soft);
   color: var(--act-brand);
-  padding: 0.6rem 1.2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: .55rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
 }
 
-/* 各活動セクション */
-.activity-section {
-  display: flex;
+/* 活動カード（共通） */
+.activity-card{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 3.5rem auto;
-  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.6rem 1.2rem;
   background: var(--act-card);
   border-radius: var(--act-radius);
   box-shadow: var(--act-shadow);
 }
-.activity-section.reverse {
-  flex-direction: row-reverse;
-}
-.activity-img {
-  flex: 1 1 280px;
-  text-align: center;
-}
-.activity-photo {
-  width: 100%;
-  max-width: 320px;
+.activity-card--alt{ grid-template-columns: 1.2fr 1fr; } /* 交互のリズム */
+
+.activity-img{ text-align: center; }
+.activity-photo{
+  width: 100%; max-width: 320px; height: auto;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  transition: transform .25s ease;
 }
-.activity-text {
-  flex: 1 1 380px;
-}
-.activity-text h3 {
-  color: var(--act-brand);
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
-  margin-bottom: 0.8rem;
-  border-left: 6px solid var(--act-brand);
-  padding-left: 0.6rem;
-}
-.activity-text p {
-  font-size: clamp(1rem, 2.2vw, 1.1rem);
-  color: var(--act-ink);
-}
+.activity-photo:hover{ transform: scale(1.03); }
 
-/* 年間表・スケジュール */
+.activity-text{ text-align: left; position: relative; }
+.activity-num{
+  display: inline-block;
+  background: var(--act-brand);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .06em;
+  border-radius: 999px;
+  padding: .2rem .7rem;
+  margin-bottom: .4rem;
+  font-size: .95rem;
+}
+.activity-text h3{
+  color: var(--act-brand);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  margin: 0 0 .5rem;
+  border-left: 6px solid var(--act-brand);
+  padding-left: .6rem;
+}
+.activity-text p{ margin: 0; color: var(--act-ink); }
+
+/* 年間表 & 1週間 */
+
+/* ===============================
+   ACTIVITY SCHEDULE & WEEK
+   =============================== */
+
+/* 背景に淡いグラデーション */
 .activity-schedule,
 .activity-week {
+  position: relative;
+  padding: 4rem 1rem;
   text-align: center;
-  margin: 4rem auto;
-  max-width: 1000px;
+  overflow: hidden;
 }
+
+.activity-schedule::before,
+.activity-week::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #fff7f5 0%, #fef8ee 50%, #ffffff 100%);
+  z-index: 0;
+}
+
+/* 内部コンテナ */
+.activity-section-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 見出しとサブテキスト */
 .activity-schedule h2,
 .activity-week h2 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   color: var(--act-brand);
-  margin-bottom: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  position: relative;
+  display: inline-block;
 }
+.activity-schedule h2::after,
+.activity-week h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: var(--act-brand);
+  margin: 0.4rem auto 1rem;
+  border-radius: 4px;
+}
+
+.activity-subtext {
+  color: var(--act-muted);
+  font-size: clamp(1rem, 2.4vw, 1.1rem);
+  margin-bottom: 2rem;
+}
+
+/* 画像カード風フレーム */
+.activity-schedule-frame,
+.activity-week-frame {
+  background: var(--act-card);
+  border-radius: var(--act-radius);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.activity-schedule-frame:hover,
+.activity-week-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 画像本体 */
 .activity-schedule-img,
 .activity-week-img {
   width: 100%;
-  max-width: 850px;
+  height: auto;
+  display: block;
+  border-radius: var(--act-radius);
+  transition: transform 0.4s ease;
+}
+.activity-schedule-frame:hover .activity-schedule-img,
+.activity-week-frame:hover .activity-week-img {
+  transform: scale(1.02);
+}
+
+/* スマホ対応 */
+@media (max-width: 640px) {
+  .activity-schedule,
+  .activity-week {
+    padding: 3rem 1rem;
+  }
+  .activity-schedule-frame,
+  .activity-week-frame {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  }
+  .activity-subtext {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* アニメーション（控えめ） */
+@media (prefers-reduced-motion: no-preference){
+  .activity-card{
+    opacity: 0; transform: translateY(40px);
+    animation: actFade .9s ease forwards;
+  }
+  .activity-card:nth-of-type(1){ animation-delay: .0s; }
+  .activity-card:nth-of-type(2){ animation-delay: .1s; }
+  .activity-card:nth-of-type(3){ animation-delay: .2s; }
+  @keyframes actFade { to{ opacity:1; transform: translateY(0);} }
+}
+
+/* レスポンシブ */
+@media (max-width: 920px){
+  .activity-card,
+  .activity-card--alt{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .activity-text{ text-align: left; }
+  .activity-photo{ max-width: 280px; }
+}
+@media (max-width: 640px){
+  .activity-intro{ padding: 1.3rem 1rem; }
+  .activity-card{ padding: 1.2rem .9rem; gap: 1.2rem; }
+}
+
+
+
+/* ---------- 活動カード（枠均等に修正） ---------- */
+.activity-card {
+  display: flex;
+  align-items: stretch; /* ← 高さをそろえる */
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.6rem 1.2rem;
+  background: var(--act-card);
   border-radius: var(--act-radius);
   box-shadow: var(--act-shadow);
 }
 
-/* スクロールフェード */
-@media (prefers-reduced-motion: no-preference) {
-  .activity-section {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeInUp 1s ease forwards;
-  }
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* 交互レイアウト */
+.activity-card--alt {
+  flex-direction: row-reverse;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .activity-section {
+/* 画像部分：縦横比を統一・中央寄せ */
+.activity-img {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+/* 画像を正方形として統一（はみ出し防止） */
+.activity-photo {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;   /* ← 正方形比率を保つ */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform .25s ease;
+}
+.activity-photo:hover {
+  transform: scale(1.03);
+}
+
+/* テキスト部分 */
+.activity-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ← 高さ中央寄せ */
+  text-align: left;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.activity-num {
+  display: inline-block;
+  background: var(--act-brand);
+  color: #fff;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: .2rem .7rem;
+  margin-bottom: .4rem;
+  font-size: .95rem;
+}
+
+.activity-text h3 {
+  color: var(--act-brand);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  margin: 0 0 .5rem;
+  border-left: 6px solid var(--act-brand);
+  padding-left: .6rem;
+}
+
+.activity-text p {
+  margin: 0;
+  color: var(--act-ink);
+}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 920px) {
+  .activity-card,
+  .activity-card--alt {
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
   }
+
+  .activity-img,
+  .activity-text {
+    flex: none;
+    width: 100%;
+  }
+
   .activity-photo {
-    max-width: 260px;
+    max-width: 280px;
+  }
+
+  .activity-text {
+    text-align: left;
+    margin-top: 1rem;
   }
 }
